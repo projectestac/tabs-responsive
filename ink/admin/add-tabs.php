@@ -7,43 +7,50 @@
 		margin-bottom:20px;
 	}
 	</style>
-	<h1>Tabs Design Template </h1>
-		<div style="overflow:hidden;display:block;width:100%;padding-top:20px">
-			
-			<div class="col-md-3">
-				<div class="demoftr">	
-					
-					<div class="">
-						<div class="wpsm_home_portfolio_showcase">
-							<div class="wpsm_ribbon"><a target="_blank" href="https://wpshopmart.com/plugins/tabs-pro-plugin/"><span> Selected </span></a></div>
-							<img class="wpsm_img_responsive ftr_img" src="<?php echo wpshopmart_tabs_r_directory_url.'assets/images/accordion-1.png'?>">
-							</div>
-					</div>
-					<div style="padding:13px;overflow:hidden; background: #EFEFEF; border-top: 1px dashed #ccc;">
-						<h3 class="text-center pull-left" style="margin-top: 10px;margin-bottom: 10px;font-weight:900">Selected Design</h3>
-						<a type="button"  class="pull-right btn btn-danger design_btn" id="templates_btn1" target="_blank" href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" >Check Demo</a>
-							</div>		
-				</div>	
-			</div>
-			
-			<div class="col-md-3">
-				<div class="demoftr">	
-					
-					<div class="">
-						<div class="wpsm_home_portfolio_showcase">
-							<div class="wpsm_ribbon wpsm_ribbon2"><a target="_blank" href="https://wpshopmart.com/plugins/tabs-pro-plugin/"><span>Buy Now</span></a></div>
-							<img class="wpsm_img_responsive ftr_img" src="<?php echo wpshopmart_tabs_r_directory_url.'assets/images/accordion-2.png'?>">
-							</div>
-					</div>
-					<div style="padding:13px;overflow:hidden; background: #EFEFEF; border-top: 1px dashed #ccc;">
-						<h3 class="text-center pull-left" style="margin-top: 10px;margin-bottom: 10px;font-weight:900">Pro Templates </h3>
-						<a type="button"  class="pull-right btn btn-danger design_btn" id="templates_btn2" target="_blank" href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" >Check Demo</a>
-							</div>		
-				</div>	
-			</div>
-			
-			</div>
-		
+	<?php
+// XTEC ************ ELIMINAT - Hide design templates
+// 2017.08.16 @joansala
+/*
+ *	
+ *	<h1>Tabs Design Template </h1>
+ *		<div style="overflow:hidden;display:block;width:100%;padding-top:20px">
+ *			
+ *			<div class="col-md-3">
+ *				<div class="demoftr">	
+ *					
+ *					<div class="">
+ *						<div class="wpsm_home_portfolio_showcase">
+ *							<div class="wpsm_ribbon"><a target="_blank" href="https://wpshopmart.com/plugins/tabs-pro-plugin/"><span> Selected </span></a></div>
+ *							<img class="wpsm_img_responsive ftr_img" src="<?php echo wpshopmart_tabs_r_directory_url.'assets/images/accordion-1.png'?>">
+ *							</div>
+ *					</div>
+ *					<div style="padding:13px;overflow:hidden; background: #EFEFEF; border-top: 1px dashed #ccc;">
+ *						<h3 class="text-center pull-left" style="margin-top: 10px;margin-bottom: 10px;font-weight:900">Selected Design</h3>
+ *						<a type="button"  class="pull-right btn btn-danger design_btn" id="templates_btn1" target="_blank" href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" >Check Demo</a>
+ *							</div>		
+ *				</div>	
+ *			</div>
+ *			
+ *			<div class="col-md-3">
+ *				<div class="demoftr">	
+ *					
+ *					<div class="">
+ *						<div class="wpsm_home_portfolio_showcase">
+ *							<div class="wpsm_ribbon wpsm_ribbon2"><a target="_blank" href="https://wpshopmart.com/plugins/tabs-pro-plugin/"><span>Buy Now</span></a></div>
+ *							<img class="wpsm_img_responsive ftr_img" src="<?php echo wpshopmart_tabs_r_directory_url.'assets/images/accordion-2.png'?>">
+ *							</div>
+ *					</div>
+ *					<div style="padding:13px;overflow:hidden; background: #EFEFEF; border-top: 1px dashed #ccc;">
+ *						<h3 class="text-center pull-left" style="margin-top: 10px;margin-bottom: 10px;font-weight:900">Pro Templates </h3>
+ *						<a type="button"  class="pull-right btn btn-danger design_btn" id="templates_btn2" target="_blank" href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" >Check Demo</a>
+ *							</div>		
+ *				</div>	
+ *			</div>
+ *			
+ *			</div>
+ */
+// ************ FI
+    ?>
 	
 	
 	<h3><?php _e('Add Tabs',wpshopmart_tabs_r_text_domain); ?></h3>
@@ -159,8 +166,15 @@
 	</div>
 	
 </div>
-<h1>Get Support Help Here</h1>
-<h3>If You have any issue then please ask us any time</h3>
-<a href="https://wordpress.org/support/plugin/tabs-responsive" target="_blank" class="button button-primary button-hero ">Get Support</a>
+<?php
+// XTEC ************ ELIMINAT - Hide support link
+// 2017.08.16 @joansala
+/*
+ * <h1>Get Support Help Here</h1>
+ * <h3>If You have any issue then please ask us any time</h3>
+ * <a href="https://wordpress.org/support/plugin/tabs-responsive" target="_blank" class="button button-primary button-hero ">Get Support</a>
+ */
+// ************ FI
+?>
 <br> <br>
 <?php require('add-tabs-js-footer.php'); ?>
