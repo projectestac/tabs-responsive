@@ -104,5 +104,31 @@ function wpsm_tabs_r_recom_js_css(){
 function wpsm_tabs_rrecom_page_funct(){
 	require_once('ink/admin/free.php');
 }
- 
+
+
+// XTEC ************ AFEGIT - Remove premium options and ads
+// 2017.10.30 @joansala
+
+/**
+ * Remove ads from the plugin.
+ */
+add_action( 'wp_loaded', function() {
+    remove_action( 'admin_menu' , 'wpsm_tabs_r_recom_menu' );
+    remove_action( 'admin_notices', 'wpsm_tabs_r_review' );
+    remove_action( 'in_admin_header','wpsm_tabs_respnsive_header_info' );
+});
+
+
+/**
+ * Remove premium plugin metaboxes.
+ */
+add_action( 'do_meta_boxes', function() {
+    remove_meta_box( 'tabs_r_more_pro', 'tabs_responsive', 'normal' );
+    remove_meta_box( 'tabs_r_rateus', 'tabs_responsive', 'side' );
+    remove_meta_box( 'tabs_r_shortcode', 'tabs_responsive', 'normal' );
+    remove_meta_box( 'wpsm_tabs_r_pic_more_pro', 'tabs_responsive', 'normal' );
+});
+
+//************ FI
+
 ?>
