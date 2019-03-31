@@ -1,5 +1,6 @@
-=== Tabs ===
-Contributors: wpshopmart
+=== XTEC Tabs Responsive ===
+
+Contributors: wpshopmart, xtec
 Donate link: https://wpshopmart.com/plugins/tabs-pro-plugin/
 Tags: tab, tabs, responsive tabs, animation, animated tab, css3 tabs, bootstrap tabs, tabs content, responsive, shortcode, widget, wordpress tabs, wp tabs, accordion, collapse, toggle, bootstrap tab, jquery, tab widget, tab shortcode, jquery tabs, sidebar, plugin, html, html5, html5 tabs
 Requires at least: 4.9
@@ -11,6 +12,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tabs Responsive is the most easiest drag & drop Tabs builder for WordPress. You can add unlimited Tabs with unlimited color Scheme.
 
 == Description ==
+
+NOTE: THIS IS A FORK OF THE TABS-RESPONSIVE PLUGIN FOR WORDPRESS.
 
 Tabs Responsive is based on bootstrap framework, So This plugin design is responsive and user friendly to any mobile devices. You can display both vertical and horizontal tabs style using this plugin . Add multiple Tabs on multiple pages and post. There unlimited colour scheme and font style available for content.
 
