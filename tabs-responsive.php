@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Tabs Responsive
- * Version: 1.7.4
+ * Version: 1.9.0
  * Description:  Tabs Responsive is the most easiest drag & drop Tabs builder for WordPress. You can add unlimited Tabs with unlimited color Scheme.
  * Author: wpshopmart
- * Author URI: http://www.wpshopmart.com
- * Plugin URI: http://www.wpshopmart.com
+ * Author URI: https://www.wpshopmart.com
+ * Plugin URI: https://www.wpshopmart.com/plugins
  */
 
 /**
@@ -13,12 +13,14 @@
  */
 define("wpshopmart_tabs_r_directory_url", plugin_dir_url(__FILE__));
 define("wpshopmart_tabs_r_text_domain", "wpsm_tabs_r");
-
+add_action('plugins_loaded', 'wpsm_tabs_r_tr');
+function wpsm_tabs_r_tr() {
+	load_plugin_textdomain( wpshopmart_tabs_r_text_domain, FALSE, dirname( plugin_basename(__FILE__)).'/languages/' );
+}
 /**
  * PLUGIN Install
  */
 require_once("ink/install/installation.php");
-
 
 function wpsm_tabs_r_default_data() {
 	$Settings_Array = serialize( array(
@@ -43,26 +45,23 @@ function wpsm_tabs_r_default_data() {
 		"tabs_margin"      =>"no",
 		"tabs_content_margin"      =>"no",
 		) );
-
 	add_option('Tabs_R_default_Settings', $Settings_Array);
 }
 register_activation_hook( __FILE__, 'wpsm_tabs_r_default_data' );
 
 /**
- * CPT CLASS
+ * tabs responsive cpt + admin panel
  */
- 
 require_once("ink/admin/menu.php");
 
 /**
  * SHORTCODE
  */
- 
 require_once("template/shortcode.php");
 
 /**
-WIDGET
-*/
+ * WIDGET
+ */
  require_once("ink/widget/widget.php");
  
 // darken color code 
@@ -77,8 +76,7 @@ WIDGET
         $c = ($c < 0) ? 0 : dechex($c);
         $rgb .= (strlen($c) < 2) ? '0'.$c : $c;
     }
- 
-    return '#'.$rgb;
+	return '#'.$rgb;
 }
 
 // Add settings link on plugin page
@@ -93,9 +91,11 @@ add_filter("plugin_action_links_$plugin", 'wpsm_tabs_r_settings_link' );
 add_action('admin_menu' , 'wpsm_tabs_r_recom_menu');
 function wpsm_tabs_r_recom_menu() {
 	$submenu = add_submenu_page('edit.php?post_type=tabs_responsive', __('More_Free_Plugins', wpshopmart_tabs_r_text_domain), __('More Free Plugins', wpshopmart_tabs_r_text_domain), 'administrator', 'wpsm_tabs_r_recom_page', 'wpsm_tabs_rrecom_page_funct');
+	$submenu2 = add_submenu_page('edit.php?post_type=tabs_responsive', __('Free Vs Pro', wpshopmart_tabs_r_text_domain), __('Free Vs Pro', wpshopmart_tabs_r_text_domain), 'administrator', 'wpsm_tabs_r_fvp_page', 'wpsm_tabs_r_fvp_page_funct');
 	
-	//add hook to add styles and scripts for Responsive Accordion plugin admin page
+	//add hook to add styles and scripts for Tabs Plugin admin page
     add_action( 'admin_print_styles-' . $submenu, 'wpsm_tabs_r_recom_js_css' );
+	add_action( 'admin_print_styles-' . $submenu2, 'wpsm_tabs_r_fvp_js_css' );
 }
 function wpsm_tabs_r_recom_js_css(){
 	wp_enqueue_style('wpsm_tabs_r_bootstrap_css_recom', wpshopmart_tabs_r_directory_url.'assets/css/bootstrap.css');

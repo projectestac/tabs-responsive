@@ -198,3 +198,55 @@ border-bottom: 5px solid #F1F1F1;
 .wp-picker-container, .wp-picker-container:active{
 display:block;
 }
+
+/* free vs pro table */
+
+#free_pro .free-pro-table {
+  border-spacing: 0;
+  width: 100%;
+}
+
+#free_pro .free-pro-table th {
+  padding-bottom: 20px;
+      font-size: 18px;
+}
+
+#free_pro .free-pro-table td {
+  border-top: 1px solid #ccc;
+  padding: 20px 0 25px;
+}
+
+#free_pro .free-pro-table h3{
+  margin: 0;
+      font-size: 20px;
+}
+
+#free_pro .free-pro-table td p {
+  margin: 0;
+}
+
+#free_pro .free-pro-table .only-lite,
+#free_pro .free-pro-table .only-pro {
+  text-align: center;
+  width: 15%;
+      font-size: 20px;
+}
+
+#free_pro .free-pro-table .only-lite .dashicons-before:before {
+  color: #00A878;
+}
+
+#free_pro .free-pro-table .only-pro .dashicons-before:before {
+  color: #ff3439;
+}
+
+#free_pro .free-pro-table .only-lite .dashicons-before:before,
+#free_pro .free-pro-table .only-pro .dashicons-before:before {
+  font-size: 35px;
+  height: 35px;
+  width: 35px;
+}
+
+#free_pro .ti-about-page-text-center {
+  text-align: center;
+}
