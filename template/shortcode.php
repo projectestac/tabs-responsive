@@ -1,12 +1,12 @@
 <?php
 add_shortcode( 'TABS_R', 'TABS_R_ShortCode' );
 function TABS_R_ShortCode( $Id ) {
-	ob_start();
-	if(!isset($Id['id']))
-	{
+	ob_start();	
+	if(!isset($Id['id'])) 
+	 {
 		$WPSM_Tabs_ID = "";
-	}
-	else
+	 } 
+	else 
 	{
 		$WPSM_Tabs_ID = $Id['id'];
 	}

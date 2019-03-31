@@ -1,9 +1,4 @@
 <?php 
-add_action('plugins_loaded', 'wpsm_tabs_r_tr');
-function wpsm_tabs_r_tr() {
-	load_plugin_textdomain( wpshopmart_tabs_r_text_domain, FALSE, dirname( plugin_basename(__FILE__)).'/languages/' );
-}
-
 function wpsm_tabs_r_front_script() {
 		
 		wp_enqueue_style('wpsm_tabs_r-font-awesome-front', wpshopmart_tabs_r_directory_url.'assets/css/font-awesome/css/font-awesome.min.css');
@@ -190,22 +185,35 @@ function wpsm_tabs_r_dismiss_review() {
 }
 
 
+
 function wpsm_tabs_respnsive_header_info() {
  	if(get_post_type()=="tabs_responsive") {
 		?>
 		<style>
+		@media screen and (max-width: 760px){
+			.wpsm_ac_h_i{
+				display:none;
+				
+			}
+		}
 		.wpsm_ac_h_i{
-			background:url('<?php echo wpshopmart_tabs_r_directory_url.'assets/images/slideshow-01.jpg'; ?>') 50% 0 repeat fixed;
+			    background-color: #4625a7;
+    background: -webkit-linear-gradient(60deg, #4625a7, #915aff);
+    background: linear-gradient(60deg, #4625a7, #915aff);
+			-webkit-box-shadow: 0px 13px 21px -10px rgba(128,128,128,1);
+			-moz-box-shadow: 0px 13px 21px -10px rgba(128,128,128,1);
+			box-shadow: 0px 13px 21px -10px rgba(128,128,128,1);			
 			margin-left: -20px;
-			font-family: Myriad Pro ;
 			cursor: pointer;
+			padding-top:20px;
+			    overflow: HIDDEN;
 			text-align: center;
 		}
 		.wpsm_ac_h_i .wpsm_ac_h_b{
 			color: white;
 			font-size: 30px;
 			font-weight: bolder;
-			padding: 0 0 15px 0;
+			padding: 0 0 0px 0;
 		}
 		.wpsm_ac_h_i .wpsm_ac_h_b .dashicons{
 			font-size: 40px;
@@ -219,86 +227,127 @@ function wpsm_tabs_respnsive_header_info() {
 			font-size: 18px;
 			padding: 0 0 15px 15px;
 		}
-
 		.wpsm_ac_h_i a{
-		text-decoration: none;
+			text-decoration: none;
 		}
 		@media screen and ( max-width: 600px ) {
 			.wpsm_ac_h_i{ padding-top: 60px; margin-bottom: -50px; }
 			.wpsm_ac_h_i .WlTSmall { display: none; }
 		}
 		.texture-layer {
-			background: rgba(0,0,53,0.27);
+			background: rgba(0,0,0,0);
 			padding-top: 0px;
-			padding: 27px 0 23px 0;
+			padding: 0px 0 23px 0;
+		}
+		.wpsm_ac_h_i  ul{
+			padding:0px 0px 0px 0px;
 		}
 		.wpsm_ac_h_i  li {
+			text-align:left;
 			color:#fff;
-			font-size: 17px;
-			line-height: 1.3;
+			font-size: 16px;
+			line-height: 26px;
 			font-weight: 600;
+			
 		}
-		 .wpsm_ac_h_i .btn-danger{
-			  font-size: 29px;
-			  background-color: #E74B42;
-			  border-radius:1px;
-			  margin-right:10px;
-				 
-		  }
-		  .wpsm_ac_h_i .btn-success{
-			      font-size: 29px;
-				  border-radius:1px;
-		  }
+		.wpsm_ac_h_i  li i{
+			margin-right:6px ;
+			margin-bottom:10px;	
+			font-size: 12px;			
+		}
+		 
+		.wpsm_ac_h_i .btn-danger{
+			font-size: 29px;
+			background-color: #000000;
+			border-radius:1px;
+			margin-right:10px;
+			margin-top: 0px;
+			border-color:#000;
+			 
+		}
+		.wpsm_ac_h_i .btn-success{
+			font-size: 28px;
+			border-radius:1px;
+			background-color: #ffffff;
+			border-color: #ffffff;
+			color:#000;
+		}
+		.btn-danger {
+			color: #fff;
+    background-color: #e0bf1b !important;
+    border-color: #e0bf1b !important;
+		}
+		.pad-o{
+			padding:0px;
+			
+		}
 
+		
 		</style>
+		
+		
 		<div class="wpsm_ac_h_i ">
-			<div class="texture-layer">
-				<a href="http://wpshopmart.com/plugins/accordion-pro/" target="_blank">
-					<div class="wpsm_ac_h_b"><a class="btn btn-danger btn-lg " href="https://wpshopmart.com/plugins/tabs-pro-plugin/" target="_blank">Get Tabs Pro Only In $6</a><a class="btn btn-success btn-lg " href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" target="_blank">View Demo</a></div>
-					<div style="overflow:hidden;display:block;width:100%">
-						<div class="col-md-3">
-							<ul>
-								<li> 20+ Design Templates </li>
-								<li> 30+ Content Animations </li>
-								<li> Individual Color Scheme </li>
-								<li> 4 Overlay Effect </li>
-								<li> 500+ Google Fonts </li>
-							</ul>
-						</div>
-						<div class="col-md-3">
-							<ul>
-								<li> Customize Icon Position  </li>
-								<li> Custom Image icon </li>
-								<li> Tabs on Hover </li>
-								<li> Widget Option </li>
-								<li> 500+ Glyphicon Icons Support </li>
-							</ul>
-						</div>
-						<div class="col-md-3">
-							<ul>
-								<li> 500+ Dashicons Icon Support </li>
-								<li> 1000+ Font Awesome Icon Support </li>
-								<li> Tabs Custom Width </li>
-								<li> Unlimited Shortcode </li>
-								
-								<li> Drag And Drop Builder </li>
-								
-							</ul>
-						</div>
-						<div class="col-md-3">
-							<ul>
-								<li> Tabs Custom Height </li>
-								<li> Border Color Customization </li>
-								<li> Unlimited Color Scheme </li>
-								<li> High Priority Support </li>
-								<li> All Browser Compatible </li>
-							</ul>
-						</div>
-						
+				<div class="texture-layer">
+					<div class="col-md-3">
+						<img src="<?php echo wpshopmart_tabs_r_directory_url.'assets/images/tab-intro.jpg'; ?>"  class="img-responsive"/>
+					
 					</div>
-				</a>
+				
+					
+					
+						<div class="col-md-9">
+							<div class="wpsm_ac_h_b col-md-6" style="text-align:left">
+								<a class="btn btn-danger btn-lg " href="https://wpshopmart.com/plugins/tabs-pro-plugin/" target="_blank">Get Pro Version</a><a class="btn btn-success btn-lg " href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" target="_blank">View Demo</a>
+							</div>								
+							<div class="col-md-6" style="text-align:left">							
+								<h1 style="color:#fff;font-size:34px;font-weight:800">Tabs Pro Plugin Features</h1>							
+							</div>					
+						
+							<div class="col-md-12" style="padding-bottom:20px;">
+								<a href="https://wpshopmart.com/plugins/tabs-pro-plugin/" target="_blank">
+									<div class="col-md-3 pad-o">
+										<ul>
+											<li> <i class="fa fa-check"></i>20+ Design Templates </li>
+											<li> <i class="fa fa-check"></i>30+ Content Animations </li>
+											<li> <i class="fa fa-check"></i>Individual Color Scheme </li>
+											<li> <i class="fa fa-check"></i>4 Overlay Effect </li>
+											<li> <i class="fa fa-check"></i>500+ Google Fonts </li>
+										</ul>
+										</ul>
+									</div>
+									<div class="col-md-3 pad-o">
+										<ul>
+								<li> <i class="fa fa-check"></i>Customize Icon Position  </li>
+								<li> <i class="fa fa-check"></i>Custom Image icon </li>
+								<li> <i class="fa fa-check"></i>Tabs on Hover </li>
+								<li> <i class="fa fa-check"></i>Widget Option </li>
+								<li> <i class="fa fa-check"></i>500+ Glyphicon Icons Support </li>
+							</ul>
+									</div>
+									<div class="col-md-3 pad-o">
+										<ul>	<li> <i class="fa fa-check"></i>500+ Dashicons Icon Support </li>
+								<li> <i class="fa fa-check"></i>1000+ Font Awesome Icon Support </li>
+								<li> <i class="fa fa-check"></i>Tabs Custom Width </li>
+								<li> <i class="fa fa-check"></i>Unlimited Shortcode </li>
+								
+								<li> <i class="fa fa-check"></i>Drag And Drop Builder </li>
+								
+							</ul>
+									</div>
+									<div class="col-md-3 pad-o">
+									<ul>		<li> <i class="fa fa-check"></i>Tabs Custom Height </li>
+								<li> <i class="fa fa-check"></i>Border Color Customization </li>
+								<li> <i class="fa fa-check"></i>Unlimited Color Scheme </li>
+								<li> <i class="fa fa-check"></i>High Priority Support </li>
+								<li> <i class="fa fa-check"></i>All Browser Compatible </li>
+							</ul>
+									</div>
+								</a>
+							</div>				
+						</div>				
+				</div>
+			
 			</div>
-		</div>
 		<?php  
 	}
 }

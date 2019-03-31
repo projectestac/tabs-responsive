@@ -1,19 +1,16 @@
-=== XTEC Tabs Responsive ===
-
-Contributors: wpshopmart, xtec
+=== Tabs ===
+Contributors: wpshopmart
 Donate link: https://wpshopmart.com/plugins/tabs-pro-plugin/
 Tags: tab, tabs, responsive tabs, animation, animated tab, css3 tabs, bootstrap tabs, tabs content, responsive, shortcode, widget, wordpress tabs, wp tabs, accordion, collapse, toggle, bootstrap tab, jquery, tab widget, tab shortcode, jquery tabs, sidebar, plugin, html, html5, html5 tabs
-Requires at least: 3.3
-Tested up to: 4.8
-Stable tag: 1.7.4
+Requires at least: 4.0
+Tested up to: 5.0.3
+Stable tag: 1.9.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Tabs Responsive is the most easiest drag & drop Tabs builder for WordPress. You can add unlimited Tabs with unlimited color Scheme.
 
 == Description ==
-
-NOTE: THIS IS A FORK OF THE TABS-RESPONSIVE PLUGIN FOR WORDPRESS.
 
 Tabs Responsive is based on bootstrap framework, So This plugin design is responsive and user friendly to any mobile devices. You can display both vertical and horizontal tabs style using this plugin . Add multiple Tabs on multiple pages and post. There unlimited colour scheme and font style available for content.
 
@@ -118,6 +115,18 @@ Plugin so easy UI is user friendly, just add new tabs and then easily publish it
 
 We have tested on with multiple themes, and work on every themes. So design is very clean and works with youe theme as well.
 
+### CHECK MORE FREE WORDPRESS PLUGINS BY WPSHOPMART
+
+* [Team Builder](https://wordpress.org/plugins/team-builder/)
+* [Testimonial Builder](https://wordpress.org/plugins/testimonial-builder/)
+* [Counter Numbers](https://wordpress.org/plugins/counter-number-showcase/)
+* [Accordion Collpase](https://wordpress.org/plugins/responsive-accordion-and-collapse/)
+* [Service Box](https://wordpress.org/plugins/service-box/)
+* [Coming Soon Page](https://wordpress.org/plugins/responsive-coming-soon/)
+
+### Plugin Language Contributors
+
+* Deutsch translation by  [FGBmaster](https://profiles.wordpress.org/fgbmaster)
 
 
 = Translators =
@@ -150,6 +159,56 @@ Please use WordPress support forum to ask any query regarding any issue.
 
 
 == Changelog ==
+
+= 1.9.0 =
+* Compatible with wordpress version 5.0.3
+
+= 1.8.9 =
+* Compatible with wordpress version 5.0
+
+= 1.8.8 =
+* Added deutsch language translation 
+
+= 1.8.7 =
+* Minor Issue Resolved 
+
+= 1.8.6 =
+* Compatible with wordpress version 4.9.8
+
+= 1.8.5 =
+* Compatible with wordpress version 4.9.6
+
+= 1.8.4 =
+* optimized tab front css
+
+= 1.8.3 =
+* Minor Bug Resolved 
+
+= 1.8.2 =
+* Minor Issue Resolved 
+
+= 1.8.1 =
+*  Back-end Minor Css Issue Resolved 
+
+= 1.8.0 =
+* update wrong classname
+
+= 1.7.9 =
+* update ssl link for demo
+
+
+= 1.7.8 =
+* Compatible with wordpress 4.9 version
+
+= 1.7.7 =
+* Update some comments for developer help
+* Compatible with wordpress version 4.8.2
+
+= 1.7.6 =
+* update backend screenshot 
+
+= 1.7.5 =
+* Small css code update 
 
 = 1.7.4 =
 * Minor Issue Resolved 

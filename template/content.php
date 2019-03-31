@@ -115,10 +115,6 @@
 // XTEC ************ MODIFICAT - Add paragraphs automatically
 // 2017.08.16 @joansala
 							$tabs_desc          = wpautop($tabs_single_data['tabs_desc']);
-//************ ORIGINAL
-/*
-							$tabs_desc          = $tabs_single_data['tabs_desc'];
- */
 //************ FI
 							$tabs_title_icon    = $tabs_single_data['tabs_title_icon'];
 							$enable_single_icon = $tabs_single_data['enable_single_icon'];
