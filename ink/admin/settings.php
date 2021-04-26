@@ -225,14 +225,7 @@ if(isset($_POST['action123']) == "default_settins_action")
 						<img src="<?php echo wpshopmart_tabs_r_directory_url.'assets/tooltip/img/noise.png'; ?>">
 					</div>
 		    	</div>
-<?php
-// XTEC ************ ELIMINAT - Hide premium options
-// 2017.08.16 @joansala
-/*
- * 				<div style="margin-top:10px;display:block;overflow:hidden;width:100%;"> <a style="margin-top:10px" href="http://wpshopmart.com/plugins/tabs-pro-plugin/" target="_balnk">Unlock 2 More Overlays Styles In Premium Version</a> </div>
- */
-// ************ FI
-?>
+				<div style="margin-top:10px;display:block;overflow:hidden;width:100%;"> <a style="margin-top:10px" href="http://wpshopmart.com/plugins/tabs-pro-plugin/" target="_balnk">Unlock 2 More Overlays Styles In Premium Version</a> </div>
 			
 			</td>
 		</tr>
@@ -391,14 +384,7 @@ if(isset($_POST['action123']) == "default_settins_action")
 					
 					</div>
 		    	</div>
-<?php
-// XTEC ************ ELIMINAT - Hide premium options
-// 2017.08.16 @joansala
-/*
- * 				<div style="margin-top:10px;display:block;overflow:hidden;width:100%;"> <a style="margin-top:10px" href="http://wpshopmart.com/plugins/tabs-pro-plugin/" target="_balnk">Get 500+ Google Fonts In Premium Version</a> </div>
- */
-// ************ FI
-?>
+				<div style="margin-top:10px;display:block;overflow:hidden;width:100%;"> <a style="margin-top:10px" href="http://wpshopmart.com/plugins/tabs-pro-plugin/" target="_balnk">Get 500+ Google Fonts In Premium Version</a> </div>
 			
 			</td>
 		</tr>
@@ -456,14 +442,7 @@ if(isset($_POST['action123']) == "default_settins_action")
 						<h2 style="color:#fff !important;">Animation your tabs content on click , select your animation form here</h2>
 					</div>
 		    	</div>
-<?php
-// XTEC ************ ELIMINAT - Hide premium options
-// 2017.08.16 @joansala
-/*
- * 				<div style="margin-top:10px;display:block;overflow:hidden;width:100%;"> <a style="margin-top:10px" href="http://wpshopmart.com/plugins/tabs-pro-plugin/" target="_balnk">Unlock 25+ MOre Animation Effect In Premium Version</a> </div>
- */
-// ************ FI
-?>
+				<div style="margin-top:10px;display:block;overflow:hidden;width:100%;"> <a style="margin-top:10px" href="http://wpshopmart.com/plugins/tabs-pro-plugin/" target="_balnk">Unlock 25+ MOre Animation Effect In Premium Version</a> </div>
 			
 			</td>
 		</tr>
@@ -587,30 +566,23 @@ if(isset($_POST['action123']) == "default_settins_action")
 		    	</div>
 			</td>
 		</tr>
-<?php
-// XTEC ************ ELIMINAT - Hide premium options
-// 2017.08.16 @joansala
-/*
- * 		<tr>
- * 			<th scope="row"><label><?php _e('Tabs On Hover',wpshopmart_tabs_r_text_domain); ?></label></th>
- * 			<td>
- * 				<img style="width:100px; "class="wpsm_img_responsive"  src="<?php echo wpshopmart_tabs_r_directory_url.'assets/images/snap.png'; ?>" />
- * 				<br />
- * 				<a style="margin-top:10px" href="http://wpshopmart.com/plugins/tabs-pro-plugin/" target="_balnk">Available In Premium Version</a>
- * 			</td>
- * 		</tr>
- * 	
- * 		<tr>
- * 			<th scope="row"><label><?php _e('',wpshopmart_tabs_r_text_domain); ?></label></th>
- * 			<td>
- * 				<img class="wpsm_img_responsive"  src="<?php echo wpshopmart_tabs_r_directory_url.'assets/images/more-setting.jpg'; ?>" />
- * 				<br />
- * 				<a style="margin-top:10px" href="http://wpshopmart.com/plugins/tabs-pro-plugin/" target="_balnk">Available In Premium Version</a>
- * 			</td>
- * 		</tr>
- */
-// ************ FI
-?>
+		<tr>
+			<th scope="row"><label><?php _e('Tabs On Hover',wpshopmart_tabs_r_text_domain); ?></label></th>
+			<td>
+				<img style="width:100px; "class="wpsm_img_responsive"  src="<?php echo wpshopmart_tabs_r_directory_url.'assets/images/snap.png'; ?>" />
+				<br />
+				<a style="margin-top:10px" href="http://wpshopmart.com/plugins/tabs-pro-plugin/" target="_balnk">Available In Premium Version</a>
+			</td>
+		</tr>
+	
+		<tr>
+			<th scope="row"><label><?php _e('',wpshopmart_tabs_r_text_domain); ?></label></th>
+			<td>
+				<img class="wpsm_img_responsive"  src="<?php echo wpshopmart_tabs_r_directory_url.'assets/images/more-setting.jpg'; ?>" />
+				<br />
+				<a style="margin-top:10px" href="http://wpshopmart.com/plugins/tabs-pro-plugin/" target="_balnk">Available In Premium Version</a>
+			</td>
+		</tr>
 		<script>
 		
 		jQuery('.ac_tooltip').darkTooltip({

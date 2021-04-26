@@ -44,8 +44,7 @@
 					else
 						${"" . $option_name}  = $default_value;
 				}
-		}
-			
+		}		
 		
 		 $tab_border_color = ColorDarken($tabs_title_bg_clr,19);
 		 $selected_tab_border_color = ColorDarken($select_tabs_title_bg_clr,25);
@@ -112,10 +111,7 @@
 						<?php  foreach($tabs_data as $tabs_single_data)
 						{
 							$tabs_title         = $tabs_single_data['tabs_title'];
-// XTEC ************ MODIFICAT - Add paragraphs automatically
-// 2017.08.16 @joansala
-							$tabs_desc          = wpautop($tabs_single_data['tabs_desc']);
-//************ FI
+							$tabs_desc          = $tabs_single_data['tabs_desc'];
 							$tabs_title_icon    = $tabs_single_data['tabs_title_icon'];
 							$enable_single_icon = $tabs_single_data['enable_single_icon'];
 						?>
@@ -152,12 +148,7 @@
 				
 			<?php
 		}
-// XTEC ************ ELIMINAT - Hidden widgets fukasawa theme
-// 2017.03.16 @joansala
-/*
 		else{
 			echo "<h3> No tabs Found </h3>";
 		}
- */
-//************ FI
 	endwhile; ?>

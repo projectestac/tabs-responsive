@@ -1,16 +1,17 @@
 <?php
 /**
  * Plugin Name: Tabs Responsive
- * Version: 1.9.0
+ * Version: 2.1.10
  * Description:  Tabs Responsive is the most easiest drag & drop Tabs builder for WordPress. You can add unlimited Tabs with unlimited color Scheme.
  * Author: wpshopmart
  * Author URI: https://www.wpshopmart.com
- * Plugin URI: https://www.wpshopmart.com/plugins
+ * Plugin URI: https://www.wpshopmart.com/plugins/
  */
 
 /**
  * DEFINE PATHS
  */
+define('wpshopmart_tabs_r_directory_path', plugin_dir_path(__FILE__));
 define("wpshopmart_tabs_r_directory_url", plugin_dir_url(__FILE__));
 define("wpshopmart_tabs_r_text_domain", "wpsm_tabs_r");
 add_action('plugins_loaded', 'wpsm_tabs_r_tr');
@@ -21,6 +22,7 @@ function wpsm_tabs_r_tr() {
  * PLUGIN Install
  */
 require_once("ink/install/installation.php");
+//require_once("tabs-responsive-addon.php");
 
 function wpsm_tabs_r_default_data() {
 	$Settings_Array = serialize( array(
@@ -105,30 +107,11 @@ function wpsm_tabs_rrecom_page_funct(){
 	require_once('ink/admin/free.php');
 }
 
-
-// XTEC ************ AFEGIT - Remove premium options and ads
-// 2017.10.30 @joansala
-
-/**
- * Remove ads from the plugin.
- */
-add_action( 'wp_loaded', function() {
-    remove_action( 'admin_menu' , 'wpsm_tabs_r_recom_menu' );
-    remove_action( 'admin_notices', 'wpsm_tabs_r_review' );
-    remove_action( 'in_admin_header','wpsm_tabs_respnsive_header_info' );
-});
-
-
-/**
- * Remove premium plugin metaboxes.
- */
-add_action( 'do_meta_boxes', function() {
-    remove_meta_box( 'tabs_r_more_pro', 'tabs_responsive', 'normal' );
-    remove_meta_box( 'tabs_r_rateus', 'tabs_responsive', 'side' );
-    remove_meta_box( 'tabs_r_shortcode', 'tabs_responsive', 'normal' );
-    remove_meta_box( 'wpsm_tabs_r_pic_more_pro', 'tabs_responsive', 'normal' );
-});
-
-//************ FI
-
+function wpsm_tabs_r_fvp_js_css(){
+	wp_enqueue_style('wpsm_tabs_r_settings_fvp', wpshopmart_tabs_r_directory_url.'assets/css/settings.css');
+	
+}
+function wpsm_tabs_r_fvp_page_funct(){
+	require_once('ink/admin/fvp.php');
+} 
 ?>

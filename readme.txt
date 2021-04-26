@@ -2,9 +2,9 @@
 Contributors: wpshopmart
 Donate link: https://wpshopmart.com/plugins/tabs-pro-plugin/
 Tags: tab, tabs, responsive tabs, animation, animated tab, css3 tabs, bootstrap tabs, tabs content, responsive, shortcode, widget, wordpress tabs, wp tabs, accordion, collapse, toggle, bootstrap tab, jquery, tab widget, tab shortcode, jquery tabs, sidebar, plugin, html, html5, html5 tabs
-Requires at least: 4.0
-Tested up to: 5.0.3
-Stable tag: 1.9.0
+Requires at least: 4.9
+Tested up to: 5.7
+Stable tag: 2.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -159,6 +159,65 @@ Please use WordPress support forum to ask any query regarding any issue.
 
 
 == Changelog ==
+
+= 2.1.1 =
+* minor issue resolved
+
+= 2.0.9 =
+* Compatible with wordpress version 5.7
+* Add Elementor Addon
+
+= 2.0.7 =
+* minor update  
+
+= 2.0.6 =
+* Compatible with wordpress version 5.6
+
+= 2.0.5 =
+* bootstrap issue resolved
+* Compatible with wordpress version 5.5
+
+= 2.0.4 =
+* Deprecated function issue resolved
+* Compatible with wordpress version 5.4.2
+
+= 2.0.3 =
+* tabs data loss issue resolved
+* tabs background css issue reserved
+* Invalid argument supplied for foreach issue resolved
+* Compatible with wordpress version 5.4.1
+
+= 2.0.2 =
+* added help comment
+* Compatible with wordpress version 5.3.2
+
+= 2.0.1 =
+* Minor Issue Resolved 
+
+= 2.0 =
+* Compatible with wordpress version 5.3.1
+* Added helping section
+
+= 1.9.8 =
+* Compatible with wordpress version 5.3
+
+= 1.9.7 =
+* Compatible with wordpress version 5.2.4
+
+= 1.9.6 =
+* Compatible with wordpress version 5.2.3
+
+= 1.9.4 =
+* Compatible with wordpress version 5.2.2
+
+= 1.9.3 =
+* resolved delay loading issue on backend
+
+= 1.9.2 =
+* Minor Issue Resolved 
+
+= 1.9.1 =
+* Compatible with wordpress version 5.1.1
 
 = 1.9.0 =
 * Compatible with wordpress version 5.0.3

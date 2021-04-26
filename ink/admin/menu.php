@@ -56,6 +56,7 @@ class wpsm_tabs_r {
 			wp_enqueue_style('wpsm_tabs_r_remodal-css', wpshopmart_tabs_r_directory_url .'assets/modal/remodal.css');
 			wp_enqueue_style('wpsm_tabs_r_remodal-default-theme-css', wpshopmart_tabs_r_directory_url .'assets/modal/remodal-default-theme.css');
 			wp_enqueue_script('wpsm_tabs_r_min-js',wpshopmart_tabs_r_directory_url.'assets/modal/remodal.min.js',array('jquery'), false, true);
+			wp_enqueue_style('wpsm_tabs_ac_help_css', wpshopmart_tabs_r_directory_url.'assets/css/help.css');
 	
 		}
 	}
@@ -80,7 +81,7 @@ class wpsm_tabs_r {
         global $post;
         switch( $column ) {
           case 'shortcode' :
-            echo '<input style="width:225px" type="text" value="[TABS_R id='.$post_id.']" readonly="readonly" />';
+            echo '<input style="width:225px" type="text" onclick="this.select()" value="[TABS_R id='.$post_id.']" readonly="readonly" />';
             break;
           default :
             break;
@@ -91,6 +92,9 @@ class wpsm_tabs_r {
 	public function wpsm_tabs_r_meta_boxes_group(){
 		add_meta_box('tabs_r_add', __('Add Tabs Panel', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_add_tabs_r_meta_box_function'), 'tabs_responsive', 'normal', 'low' );
 		add_meta_box ('tabs_r_shortcode', __('Tabs Shortcode', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_pic_tabs_r_shortcode'), 'tabs_responsive', 'normal', 'low');
+		//add_meta_box ('tabs_r_more_free_themes', __('More Free Themes From Wpshopmart', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_pic_more_free_themes'), 'tabs_responsive', 'normal', 'low');
+		add_meta_box ('tabs_r_help', __('Help From Wpshopmart', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_help'), 'tabs_responsive', 'normal', 'low');
+		
 		add_meta_box ('tabs_r_more_pro', __('More Pro Plugin From Wpshopmart', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_pic_more_pro'), 'tabs_responsive', 'normal', 'low');
 		
 		//add_meta_box('tabs_r_donate', __('Donate Us', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_donate_meta_box_function'), 'tabs_responsive', 'side', 'low');
@@ -121,11 +125,14 @@ class wpsm_tabs_r {
 			padding: 8px 10px;
 			width:100%;
 			}
+			.handle-order-higher, .handle-order-lower{
+				display:none;
+			}
 			
 		</style>
 		<h3>Tabs Shortcode</h3>
 		<p><?php _e("Use below shortcode in any Page/Post to publish your Tabs", wpshopmart_tabs_r_text_domain);?></p>
-		<input readonly="readonly" type="text" value="<?php echo "[TABS_R id=".get_the_ID()."]"; ?>">
+		<input readonly="readonly" onclick="this.select()" type="text" value="<?php echo "[TABS_R id=".get_the_ID()."]"; ?>">
 		<?php
 		 $PostId = get_the_ID();
 		$Settings = unserialize(get_post_meta( $PostId, 'Tabs_R_Settings', true));
@@ -255,9 +262,18 @@ class wpsm_tabs_r {
 		require('data-post/tabs-settings-save-data.php');
 	}
 	
+	
+	public function wpsm_tabs_r_pic_more_free_plugins(){
+		require_once('more-free-plugins.php');
+	}
 	public function wpsm_tabs_r_pic_more_pro(){
 		require_once('more-pro.php');
 	}
+	
+	public function wpsm_tabs_r_help(){
+		require_once('help.php');
+	}
+	
 	
 }
 global $wpsm_tabs_r;
