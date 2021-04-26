@@ -92,7 +92,6 @@ class wpsm_tabs_r {
 	public function wpsm_tabs_r_meta_boxes_group(){
 		add_meta_box('tabs_r_add', __('Add Tabs Panel', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_add_tabs_r_meta_box_function'), 'tabs_responsive', 'normal', 'low' );
 		//add_meta_box ('tabs_r_more_free_themes', __('More Free Themes From Wpshopmart', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_pic_more_free_themes'), 'tabs_responsive', 'normal', 'low');
-				
 		//add_meta_box('tabs_r_donate', __('Donate Us', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_donate_meta_box_function'), 'tabs_responsive', 'side', 'low');
 		
 		// XTEC ************ MODIFICAT - Hidde Options to all users but xtecadmin
@@ -103,6 +102,7 @@ class wpsm_tabs_r {
 			add_meta_box ('tabs_r_help', __('Help From Wpshopmart', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_help'), 'tabs_responsive', 'normal', 'low');
 			add_meta_box ('tabs_r_more_pro', __('More Pro Plugin From Wpshopmart', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_pic_more_pro'), 'tabs_responsive', 'normal', 'low');
 		}
+		// ************FI
 
 		add_meta_box('tabs_r_setting', __('Tabs Settings', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_add_tabs_r_setting_meta_box_function'), 'tabs_responsive', 'side', 'low');
 	}

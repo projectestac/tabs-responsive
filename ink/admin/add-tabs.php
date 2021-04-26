@@ -7,6 +7,12 @@
 		margin-bottom:20px;
 	}
 	</style>
+
+	<?php
+	// XTEC ************ MODIFICAT - Hidde Options to all users but xtecadmin
+	// 2021.04.26 @nacho
+	if (is_xtec_super_admin() ) {
+	?>
 	<h1>Tabs Design Templates </h1>
 		<div style="overflow:hidden;display:block;width:100%;padding-top:20px">
 	<div class="col-md-3">
@@ -42,6 +48,10 @@
 			</div>
 			
 	</div>
+	<?php
+	// ************FI
+	}
+	?>
 		
 	
 	
