@@ -7,10 +7,9 @@
 		margin-bottom:20px;
 	}
 	</style>
-	<h1>Tabs Design Template </h1>
+	<h1>Tabs Design Templates </h1>
 		<div style="overflow:hidden;display:block;width:100%;padding-top:20px">
-			
-			<div class="col-md-3">
+	<div class="col-md-3">
 				<div class="demoftr">	
 					
 					<div class="">
@@ -38,11 +37,11 @@
 					<div style="padding:13px;overflow:hidden; background: #EFEFEF; border-top: 1px dashed #ccc;">
 						<h3 class="text-center pull-left" style="margin-top: 10px;margin-bottom: 10px;font-weight:900">Pro Templates </h3>
 						<a type="button"  class="pull-right btn btn-danger design_btn" id="templates_btn2" target="_blank" href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" >Check Demo</a>
-							</div>		
+					</div>		
 				</div>	
 			</div>
 			
-			</div>
+	</div>
 		
 	
 	
@@ -63,6 +62,7 @@
 					{
 						 $tabs_title = $single_data['tabs_title'];
 						 $tabs_desc = $single_data['tabs_desc'];
+						 $tabs_desc = str_replace('&#92;', '\\', $tabs_desc);
 						 $tabs_title_icon = $single_data['tabs_title_icon'];
 						 $enable_single_icon = $single_data['enable_single_icon'];
 						
@@ -159,8 +159,6 @@
 	</div>
 	
 </div>
-<h1>Get Support Help Here</h1>
-<h3>If You have any issue then please ask us any time</h3>
-<a href="https://wordpress.org/support/plugin/tabs-responsive" target="_blank" class="button button-primary button-hero ">Get Support</a>
+
 <br> <br>
 <?php require('add-tabs-js-footer.php'); ?>

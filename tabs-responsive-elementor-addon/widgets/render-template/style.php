@@ -1,3 +1,4 @@
+<?php $post_id=get_the_ID(); ?>
 #tab_container_<?php echo $post_id; ?> {
 	overflow:hidden;
 	display:block;
@@ -8,44 +9,51 @@
 
 #tab_container_<?php echo $post_id; ?> .tab-content{
 	padding:20px;
-	border: 1px solid <?php echo $tab_content_border_color; ?> !important;
-	margin-top: 0px;
-	background-color:<?php echo $tabs_desc_bg_clr; ?> !important;
-	color: <?php echo $tabs_desc_font_clr; ?> !important;
-	font-size:<?php echo $des_size; ?>px !important;
-	font-family: <?php echo $font_family; ?> !important;
-	
-	<?php if($enable_tabs_border=="yes"){ ?>
-	border: 1px solid <?php echo $tab_content_border_color; ?> !important;
+	border-width: 1px !important;
+	border-style:solid !important;
+	border-color:<?php //echo $tab_content_border_color; ?> 
+	margin-top: 0px;	
+	<?php if($settings['display_tabs_border']=="yes"){ ?>
+	border-width: 1px !important;
+	border-style:solid !important;	
 	<?php 
 	} else { ?>
-		border: 0px solid <?php echo $tab_content_border_color; ?> !important;
-		
+		border-width: 0px !important;
+		border-style:solid !important;		
 	<?php  } ?>
 }
 #tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs {
     border-bottom: 0px solid #ddd;
 }
-#tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li.active > a, #tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li.active > a:hover, #tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li.active > a:focus {
-	color: <?php echo $select_tabs_title_icon_clr; ?> !important;
-	cursor: default;
-	background-color: <?php echo $select_tabs_title_bg_clr; ?> !important;
-	border: 1px solid <?php echo $selected_tab_border_color; ?> !important;
+#tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li.active > a, #tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li.active > a:hover, #tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li.active > a:focus {	
+	cursor: default;	
+	<?php if($settings['display_tabs_border']=="yes"){ ?>
+	border-width: 1px !important;
+	border-style:solid !important;	
+	<?php 
+	} else { ?>
+		border-width: 0px !important;
+		border-style:solid !important;		
+	<?php  } ?>
 }
 
 #tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li > a {
     margin-right: 0px !important; 
     line-height: 1.42857143 !important;
-    border: 1px solid <?php echo $tab_border_color;  ?> !important;
-    border-radius: 0px 0px 0 0 !important; 
-	background-color: <?php echo $tabs_title_bg_clr; ?> !important;
-	color: <?php echo $tabs_title_icon_clr; ?> !important;
+    <?php if($settings['display_tabs_border']=="yes"){ ?>
+	border-width: 1px !important;
+	border-style:solid !important;	
+	<?php 
+	} else { ?>
+		border-width: 0px !important;
+		border-style:solid !important;		
+	<?php  } ?>
+    border-radius: 0px 0px 0 0 !important; 	
 	padding: 15px 18px 15px 18px !important;
-	text-decoration: none !important;
-	font-size: <?php echo $title_size; ?>px !important;
-	text-align:center !important;
-	font-family: <?php echo $font_family; ?> !important;
+	text-decoration: none !important;	
+	text-align:center !important;	
 }
+
 #tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li > a:focus {
 outline: 0px !important;
 }
@@ -61,10 +69,8 @@ padding:0px !important ;
 margin:0px;
 }
 
-#tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li > a:hover , #tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li > a:focus {
-    color: <?php echo $tabs_title_icon_clr; ?> !important;
-    background-color: <?php echo $tabs_title_bg_clr; ?> !important;
-	border: 1px solid <?php echo $tab_border_color; ?> !important;
+#tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li > a:hover , #tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li > a:focus {      
+	
 	
 }
 #tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li > a .fa{
@@ -77,7 +83,7 @@ margin-left:5px !important;
 }
 
 <?php 
- switch($tabs_styles){
+ switch($settings['tabs_style']){
 		case "1":
 		?>
 		#tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs a{
@@ -110,7 +116,13 @@ margin-left:5px !important;
 
 
 #tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li {
-    float: <?php echo $tabs_position; ?>;
+    float:<?php if($settings['tabs_position']=="yes"){
+		echo "Left"; }
+	else if($settings['tabs_position']!="yes")
+	{
+		echo "Right";
+	}
+	?> !important;
     margin-bottom: -1px !important;
 	margin-right:0px !important; 
 }
@@ -120,37 +132,43 @@ margin-left:5px !important;
 overflow:hidden !important;
 }
 
-<?php if($tabs_alignment=="vertical") { ?>
+<?php if($settings['tabs_alignment']=="2") { ?>
 
 @media (min-width: 769px) {
 
 	#tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li{
 	float:none !important;
-	<?php if($tabs_position=="left"){ ?>
+	<?php if($settings['tabs_position']=="yes"){ ?>
 	margin-right:-1px !important;
 	<?php } ?>
-	<?php if($tabs_position=="right"){ ?>
+	<?php if($settings['tabs_position']!="yes"){ ?>
 	margin-left:-1px !important;
 	<?php } ?>
 	}
 	#tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs{
-	float:<?php echo $tabs_position; ?> !important;
+	float:<?php if($settings['tabs_position']=="yes"){
+	echo "Left"; }
+	else if($settings['tabs_position']!="yes")
+	{
+		echo "Right";
+	}
+	?> !important;
 	margin:0px !important;
 	}
 }
 
 #tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li {
-    <?php if($tabs_margin=="yes"){ ?>
+    <?php if($settings['tabs_margin_bw_two']=="yes"){ ?>
 	margin-bottom: 8px !important;
 	<?php } ?>
 	
 }
 #tab_container_<?php echo $post_id; ?> .wpsm_nav{
-	<?php if($tabs_content_margin=="yes"){?>
-		<?php if($tabs_position=="left"){ ?>
+	<?php if($settings['margin_bw_tabs_content']=="yes"){?>
+		<?php if($settings['tabs_position']=="yes"){ ?>
 			margin-right: 8px !important;
 		<?php } ?>	
-		<?php if($tabs_position=="right"){ ?>
+		<?php if($settings['tabs_position']!="yes"){ ?>
 			margin-left: 8px !important;
 		<?php } ?>	
 	<?php } ?>
@@ -161,11 +179,17 @@ overflow:hidden !important;
 @media (min-width: 769px) {
 
 	#tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li{
-		float:<?php echo $tabs_position; ?> !important ;
-		<?php if($tabs_position=="left"){ ?>
+		float:<?php if($settings['tabs_position']=="yes"){
+		echo "Left"; }
+		else if($settings['tabs_position']!="yes")
+		{
+			echo "Right";
+		}
+		?> !important;
+		<?php if($settings['tabs_position']=="yes"){ ?>
 		margin-right:-1px !important;
 		<?php } ?>
-		<?php if($tabs_position=="right"){ ?>
+		<?php if($settings['tabs_position']!="yes"){ ?>
 		margin-left:-1px !important;
 		<?php } ?>
 	}
@@ -175,18 +199,18 @@ overflow:hidden !important;
 	}
 
 	#tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li {
-		<?php if($tabs_margin=="yes"){ ?>
-			<?php if($tabs_position=="left"){ ?>
+		<?php if($settings['tabs_margin_bw_two']=="yes"){ ?>
+			<?php if($settings['tabs_position']=="yes"){ ?>
 				margin-right: 8px !important;
 			<?php } ?>	
-			<?php if($tabs_position=="right"){ ?>
+			<?php if($settings['tabs_position']!="yes"){ ?>
 				margin-left: 8px !important;
 			<?php } ?>	
 		<?php } ?>
 		
 	}
 	#tab_container_<?php echo $post_id; ?> .wpsm_nav{
-		<?php if($tabs_content_margin=="yes"){?>
+		<?php if($settings['margin_bw_tabs_content']=="yes"){?>
 		margin-bottom: 8px !important;
 		<?php } ?>
 	}
@@ -198,7 +222,7 @@ overflow:hidden !important;
 
 @media (max-width: 768px) {
 	#tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li {
-		<?php if($tabs_margin=="yes"){ ?>
+		<?php if($settings['tabs_margin_bw_two']=="yes"){ ?>
 		margin-bottom: 8px !important;
 		margin-right:0px !important;
 		margin-left:0px !important;
@@ -206,7 +230,7 @@ overflow:hidden !important;
 		
 	}
 	#tab_container_<?php echo $post_id; ?> .wpsm_nav{
-		<?php if($tabs_content_margin=="yes"){?>
+		<?php if($settings['margin_bw_tabs_content']=="yes"){?>
 		margin-bottom: 8px !important;
 		margin-right:0px !important;
 		margin-left:0px !important;
@@ -220,7 +244,7 @@ overflow:hidden !important;
 	}
 
 	@media (max-width: 768px) {
-		<?php if($tabs_display_on_mob=="2"){ ?>
+		<?php if($settings['tabs_mobile_dis_setting']=="2"){ ?>
 			
 			#tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs  li  a  span{
 				display: none !important;
@@ -228,7 +252,7 @@ overflow:hidden !important;
 			
 		<?php } ?>
 		
-		<?php if($tabs_display_on_mob=="3"){ ?>
+		<?php if($settings['tabs_mobile_dis_setting']=="3"){ ?>
 			
 			#tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs  li  a  i{
 				display: none !important;
@@ -240,30 +264,36 @@ overflow:hidden !important;
 			margin-right:0px !important; 
 			
 		}
-		<?php if($tabs_display_mode_mob == "2") { ?>
+		<?php if($settings['title_dis_mode_mobile'] == "2") { ?>
 		#tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li{
 			float:none !important;
 		}
 		<?php } else { ?>
 			
 			#tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li {
-			<?php if($tabs_margin=="yes"){ ?>
-				<?php if($tabs_position=="left"){ ?>
+			<?php if($settings['tabs_margin_bw_two'] =="yes"){ ?>
+				<?php if($settings['tabs_position']=="yes"){ ?>
 					margin-right: 8px !important;
 				<?php } ?>	
-				<?php if($tabs_position=="right"){ ?>
+				<?php if($settings['tabs_position']!="yes"){ ?>
 					margin-left: 8px !important;
 				<?php } ?>	
 			<?php } ?>
 			
 			}
 			
-			<?php if($tabs_alignment=="vertical") { ?>
+			<?php if($settings['tabs_alignment']=="2") { ?>
 				#tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs > li{
 					float:none !important;
 				}
 				#tab_container_<?php echo $post_id; ?> .wpsm_nav-tabs{
-				float:<?php echo $tabs_position; ?> !important;
+				float:<?php if($settings['tabs_position']=="yes"){
+				echo "Left"; }
+				else if($settings['tabs_position']!="yes")
+				{
+					echo "Right";
+				}
+				?> !important;
 				margin:0px !important;
 				}
 			<?php } ?>
@@ -271,3 +301,4 @@ overflow:hidden !important;
 		<?php } ?>
 	
 	}
+<?php echo $settings['tabs_custom_css']; ?>

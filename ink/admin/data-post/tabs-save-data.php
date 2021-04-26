@@ -8,7 +8,7 @@ if(isset($PostID) && isset($_POST['tabs_r_save_data_action']) ) {
 					$tabs_title_icon = sanitize_text_field($_POST['tabs_title_icon'][$i]);
 					$enable_single_icon = sanitize_text_field($_POST['enable_single_icon'][$i]);
 					$tabs_desc = stripslashes($_POST['tabs_desc'][$i]);
-
+					$tabs_desc = str_replace('\\', '&#92;', $tabs_desc);
 					$All_data[] = array(
 						'tabs_title' => $tabs_title,
 						'tabs_title_icon' => $tabs_title_icon,

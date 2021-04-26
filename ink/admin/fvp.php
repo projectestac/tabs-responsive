@@ -1,5 +1,5 @@
   <div class="free-vs-pro-tab info-tab-content">
-	<a href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" target="_blank" class="button button-primary button-hero">Service Showcase Pro Demo</a>
+	<a href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" target="_blank" class="button button-primary button-hero">Tab Pro Plugin</a>
 	<a href="https://wpshopmart.com/plugins/tabs-pro-plugin/" target="_blank" class="button button-primary button-hero">Upgrade To Pro</a>
   </div>
   
@@ -125,7 +125,7 @@
 		                    </tr>
 		                    
 		                    <tr class="ti-about-page-text-center">
-		                        <td><a href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" target="_blank" class="button button-primary button-hero">Service Showcase Pro Demo</a></td>
+		                        <td><a href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" target="_blank" class="button button-primary button-hero">Tabs Pro Demo</a></td>
 		                    	<td colspan="2"><a href="https://wpshopmart.com/plugins/tabs-pro-plugin/" target="_blank" class="button button-primary button-hero">Upgrade To Pro</a></td>
 		                    </tr>
 		                </tbody>

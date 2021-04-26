@@ -3,8 +3,7 @@ function wpsm_tabs_r_front_script() {
 		
 		wp_enqueue_style('wpsm_tabs_r-font-awesome-front', wpshopmart_tabs_r_directory_url.'assets/css/font-awesome/css/font-awesome.min.css');
 		wp_enqueue_style('wpsm_tabs_r_bootstrap-front', wpshopmart_tabs_r_directory_url.'assets/css/bootstrap-front.css');
-		wp_enqueue_style('wpsm_tabs_r_animate', wpshopmart_tabs_r_directory_url.'assets/css/animate.css');
-		
+		wp_enqueue_style('wpsm_tabs_r_animate', wpshopmart_tabs_r_directory_url.'assets/css/animate.css');		
 		wp_enqueue_script('jquery');
 		wp_enqueue_script( 'wpsm_tabs_r_bootstrap-js-front', wpshopmart_tabs_r_directory_url.'assets/js/bootstrap.js', array(), '', true );
 		
@@ -13,8 +12,8 @@ function wpsm_tabs_r_front_script() {
 add_action( 'wp_enqueue_scripts', 'wpsm_tabs_r_front_script' );
 add_filter( 'widget_text', 'do_shortcode');
 
-add_action('media_buttons_context', 'wpsm_tabs_r_editor_popup_content_button');
-add_action('admin_footer', 'wpsm_tabs_r_editor_popup_content');
+//add_action('media_buttons_context', 'wpsm_tabs_r_editor_popup_content_button');
+//add_action('admin_footer', 'wpsm_tabs_r_editor_popup_content');
 
 function wpsm_tabs_r_editor_popup_content_button($context) {
  $img = wpshopmart_tabs_r_directory_url.'assets/images/tabs_48.png';
@@ -79,7 +78,7 @@ function wpsm_tabs_r_editor_popup_content() {
 			<button class='button primary wp_tabs_r_shortcode_button' id='wpsm_tabs_r_insert'><?php _e('Insert Tabs Shortcode', wpshopmart_tabs_r_text_domain); ?></button>
 			<?php
 		} else {
-			_e('No Tabs Found', wpshopmart_tabs_r_text_domain);
+			_e('No Tabs Created', wpshopmart_tabs_r_text_domain);
 		}
 		?>
 	</div>
@@ -122,6 +121,12 @@ function wpsm_tabs_r_review() {
 			<a style="color: #fff;background: #ef4238;padding: 5px 7px 4px 6px;border-radius: 4px;" href="https://wordpress.org/support/plugin/tabs-responsive/reviews/?filter=5#new-post" class="wpsm-tabs-b-dismiss-review-notice wpsm-tabs-b-review-out" target="_blank" rel="noopener">Rate the plugin</a>&nbsp; &nbsp;
 			<a style="color: #fff;background: #27d63c;padding: 5px 7px 4px 6px;border-radius: 4px;" href="#"  class="wpsm-tabs-b-dismiss-review-notice wpsm-rate-later" target="_self" rel="noopener"><?php _e( 'Nope, maybe later', '' ); ?></a>&nbsp; &nbsp;
 			<a style="color: #fff;background: #31a3dd;padding: 5px 7px 4px 6px;border-radius: 4px;" href="#" class="wpsm-tabs-b-dismiss-review-notice wpsm-rated" target="_self" rel="noopener"><?php _e( 'I already did', '' ); ?></a>
+			<a style="    color: #fff;
+    background: #5c60d0;
+    padding: 5px 7px 4px 6px;
+    border-radius: 4px;
+    margin-left: 10px;
+    text-decoration: none;" href="https://wpshopmart.com/plugins/tabs-pro-plugin/" class="btn btn-primary wpsm-rate-later" target="_blank" ><?php _e( 'Upgarde To Tabs Pro Plugin', '' ); ?></a>
 		</p>
 	</div>
 	<script type="text/javascript">
@@ -293,7 +298,7 @@ function wpsm_tabs_respnsive_header_info() {
 								<a class="btn btn-danger btn-lg " href="https://wpshopmart.com/plugins/tabs-pro-plugin/" target="_blank">Get Pro Version</a><a class="btn btn-success btn-lg " href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" target="_blank">View Demo</a>
 							</div>								
 							<div class="col-md-6" style="text-align:left">							
-								<h1 style="color:#fff;font-size:34px;font-weight:800">Tabs Pro Plugin Features</h1>							
+								<h1 style="color:#fff;font-size:34px;font-weight:800;line-height:1.4">Tabs Pro Plugin Features</h1>							
 							</div>					
 						
 							<div class="col-md-12" style="padding-bottom:20px;">
@@ -336,10 +341,12 @@ function wpsm_tabs_respnsive_header_info() {
 							</ul>
 									</div>
 								</a>
-							</div>				
-						</div>				
+							</div>	
+							
+						</div>	
+														
 				</div>
-			
+		
 			</div>
 		<?php  
 	}

@@ -1217,9 +1217,6 @@ tbody.collapse.in {
   border-width: 5px 5px 0;
   border-bottom-width: 0;
 }
-.dropup .btn-lg .caret {
-  border-width: 0 5px 5px;
-}
 .btn-group-vertical > .btn,
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .btn-group > .btn {

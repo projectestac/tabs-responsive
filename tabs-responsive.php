@@ -1,16 +1,17 @@
 <?php
 /**
  * Plugin Name: Tabs Responsive
- * Version: 1.9.0
+ * Version: 2.1.10
  * Description:  Tabs Responsive is the most easiest drag & drop Tabs builder for WordPress. You can add unlimited Tabs with unlimited color Scheme.
  * Author: wpshopmart
  * Author URI: https://www.wpshopmart.com
- * Plugin URI: https://www.wpshopmart.com/plugins
+ * Plugin URI: https://www.wpshopmart.com/plugins/
  */
 
 /**
  * DEFINE PATHS
  */
+define('wpshopmart_tabs_r_directory_path', plugin_dir_path(__FILE__));
 define("wpshopmart_tabs_r_directory_url", plugin_dir_url(__FILE__));
 define("wpshopmart_tabs_r_text_domain", "wpsm_tabs_r");
 add_action('plugins_loaded', 'wpsm_tabs_r_tr');
@@ -21,6 +22,7 @@ function wpsm_tabs_r_tr() {
  * PLUGIN Install
  */
 require_once("ink/install/installation.php");
+//require_once("tabs-responsive-addon.php");
 
 function wpsm_tabs_r_default_data() {
 	$Settings_Array = serialize( array(
@@ -104,5 +106,12 @@ function wpsm_tabs_r_recom_js_css(){
 function wpsm_tabs_rrecom_page_funct(){
 	require_once('ink/admin/free.php');
 }
- 
+
+function wpsm_tabs_r_fvp_js_css(){
+	wp_enqueue_style('wpsm_tabs_r_settings_fvp', wpshopmart_tabs_r_directory_url.'assets/css/settings.css');
+	
+}
+function wpsm_tabs_r_fvp_page_funct(){
+	require_once('ink/admin/fvp.php');
+} 
 ?>

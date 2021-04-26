@@ -44,8 +44,7 @@
 					else
 						${"" . $option_name}  = $default_value;
 				}
-		}
-			
+		}		
 		
 		 $tab_border_color = ColorDarken($tabs_title_bg_clr,19);
 		 $selected_tab_border_color = ColorDarken($select_tabs_title_bg_clr,25);

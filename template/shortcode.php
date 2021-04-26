@@ -1,4 +1,5 @@
 <?php
+// shortdode calling
 add_shortcode( 'TABS_R', 'TABS_R_ShortCode' );
 function TABS_R_ShortCode( $Id ) {
 	ob_start();	
