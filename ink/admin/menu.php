@@ -91,14 +91,19 @@ class wpsm_tabs_r {
 	// metaboxes groups function for call all metabox unit
 	public function wpsm_tabs_r_meta_boxes_group(){
 		add_meta_box('tabs_r_add', __('Add Tabs Panel', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_add_tabs_r_meta_box_function'), 'tabs_responsive', 'normal', 'low' );
-		add_meta_box ('tabs_r_shortcode', __('Tabs Shortcode', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_pic_tabs_r_shortcode'), 'tabs_responsive', 'normal', 'low');
 		//add_meta_box ('tabs_r_more_free_themes', __('More Free Themes From Wpshopmart', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_pic_more_free_themes'), 'tabs_responsive', 'normal', 'low');
-		add_meta_box ('tabs_r_help', __('Help From Wpshopmart', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_help'), 'tabs_responsive', 'normal', 'low');
-		
-		add_meta_box ('tabs_r_more_pro', __('More Pro Plugin From Wpshopmart', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_pic_more_pro'), 'tabs_responsive', 'normal', 'low');
-		
+				
 		//add_meta_box('tabs_r_donate', __('Donate Us', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_donate_meta_box_function'), 'tabs_responsive', 'side', 'low');
-		add_meta_box('tabs_r_rateus', __('Rate Us If You Like This Plugin', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_rateus_meta_box_function'), 'tabs_responsive', 'side', 'low');
+		
+		// XTEC ************ MODIFICAT - Hidde Options to all users but xtecadmin
+	    // 2021.04.26 @nacho
+		if (is_xtec_super_admin() ) {
+			add_meta_box('tabs_r_rateus', __('Rate Us If You Like This Plugin', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_rateus_meta_box_function'), 'tabs_responsive', 'side', 'low');
+			add_meta_box ('tabs_r_shortcode', __('Tabs Shortcode', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_pic_tabs_r_shortcode'), 'tabs_responsive', 'normal', 'low');
+			add_meta_box ('tabs_r_help', __('Help From Wpshopmart', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_help'), 'tabs_responsive', 'normal', 'low');
+			add_meta_box ('tabs_r_more_pro', __('More Pro Plugin From Wpshopmart', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_pic_more_pro'), 'tabs_responsive', 'normal', 'low');
+		}
+
 		add_meta_box('tabs_r_setting', __('Tabs Settings', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_add_tabs_r_setting_meta_box_function'), 'tabs_responsive', 'side', 'low');
 	}
 	
@@ -238,7 +243,7 @@ class wpsm_tabs_r {
 				font-size: 40px;
 			}
 		</style>
-		   <h1>Rate This plugin</h1>
+			<h1>Rate This plugin</h1>
 			<a href="https://wordpress.org/support/plugin/tabs-responsive/reviews/?filter=5" target="_blank" class="button button-primary button-hero ">RATE HERE</a>
 			<a class="wpsm-rate-us" style=" text-decoration: none; height: 40px; width: 40px;" href="https://wordpress.org/support/plugin/tabs-responsive/reviews/?filter=5" target="_blank">
 				<span class="dashicons dashicons-star-filled"></span>
