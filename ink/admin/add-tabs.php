@@ -7,6 +7,14 @@
 		margin-bottom:20px;
 	}
 	</style>
+
+	<?php
+	// XTEC ************ AFEGIT - Hidden options to all users but xtecadmin
+	// 2021.04.26 @nacho
+	if ( is_xtec_super_admin() ) {
+	// ************FI
+	?>
+
 	<h1> <?php esc_html_e('Tabs Design Templates',wpshopmart_tabs_r_text_domain); ?> </h1>
 	<div class="row" style="overflow:hidden;width:100%;padding-top:20px">
 			<div class="col-md-3">
@@ -43,6 +51,13 @@
 			
 	</div>
 		
+	<?php
+	// XTEC ************ AFEGIT - Hidden options to all users but xtecadmin
+	// 2021.04.26 @nacho
+	}
+	// ************FI
+	?>
+
 	
 	
 	<h3><?php _e('Add Tabs',wpshopmart_tabs_r_text_domain); ?></h3>
