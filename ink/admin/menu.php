@@ -92,6 +92,12 @@ class wpsm_tabs_r {
 	// metaboxes groups function for call all metabox unit
 	public function wpsm_tabs_r_meta_boxes_group(){
 		add_meta_box('tabs_r_add', __('Add Tabs Panel', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_add_tabs_r_meta_box_function'), 'tabs_responsive', 'normal', 'low' );
+
+		// XTEC ************ AFEGIT - Hidden options to all users but xtecadmin
+		// 2021.04.26 @nacho
+		if ( is_xtec_super_admin() ) {
+		// ************FI
+
 		add_meta_box ('tabs_r_shortcode', __('Tabs Shortcode', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_pic_tabs_r_shortcode'), 'tabs_responsive', 'normal', 'low');
 		//add_meta_box ('tabs_r_more_free_themes', __('More Free Themes From Wpshopmart', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_pic_more_free_themes'), 'tabs_responsive', 'normal', 'low');
 		add_meta_box ('tabs_r_help', __('Help From Wpshopmart', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_help'), 'tabs_responsive', 'normal', 'low');
@@ -100,6 +106,12 @@ class wpsm_tabs_r {
 		
 		//add_meta_box('tabs_r_donate', __('Donate Us', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_donate_meta_box_function'), 'tabs_responsive', 'side', 'low');
 		add_meta_box('tabs_r_rateus', __('Rate Us If You Like This Plugin', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_rateus_meta_box_function'), 'tabs_responsive', 'side', 'low');
+
+		// XTEC ************ AFEGIT - Hidden options to all users but xtecadmin
+		// 2021.04.26 @nacho
+		}
+		// ************FI
+
 		add_meta_box('tabs_r_setting', __('Tabs Settings', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_add_tabs_r_setting_meta_box_function'), 'tabs_responsive', 'side', 'low');
 	}
 	
@@ -264,6 +276,9 @@ class wpsm_tabs_r {
 	}
 	
 	
+// XTEC ************ ELIMINAT - Removed promotional links to all users
+// 2021.04.28 @aginard
+/*
 	public function wpsm_tabs_r_pic_more_free_plugins(){
 		require_once('more-free-plugins.php');
 	}
@@ -274,6 +289,8 @@ class wpsm_tabs_r {
 	public function wpsm_tabs_r_help(){
 		require_once('help.php');
 	}
+*/
+// ************ FI
 	
 	
 }
