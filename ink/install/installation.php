@@ -352,5 +352,11 @@ function wpsm_tabs_respnsive_header_info() {
 		<?php  
 	}
 }
+
+// XTEC ************ ELIMINAT - Hidden admin header to all users
+// 2021.04.26 @nacho
+/*
 add_action('in_admin_header','wpsm_tabs_respnsive_header_info'); 
+*/
+// ************ FI
 ?>
