@@ -384,7 +384,13 @@ if(isset($_POST['action123']) == "default_settins_action")
 					
 					</div>
 		    	</div>
+
+				<!--
+				// XTEC ************ ELIMINAT - Removed promotional links to all users
+				// 2021.04.28 @aginard
 				<div style="margin-top:10px;display:block;overflow:hidden;width:100%;"> <a style="margin-top:10px" href="http://wpshopmart.com/plugins/tabs-pro-plugin/" target="_balnk">Get 500+ Google Fonts In Premium Version</a> </div>
+				// ************ FI
+				-->
 			
 			</td>
 		</tr>
@@ -442,7 +448,12 @@ if(isset($_POST['action123']) == "default_settins_action")
 						<h2 style="color:#fff !important;">Animation your tabs content on click , select your animation form here</h2>
 					</div>
 		    	</div>
+				<!--
+				// XTEC ************ ELIMINAT - Removed promotional links to all users
+				// 2021.04.28 @aginard
 				<div style="margin-top:10px;display:block;overflow:hidden;width:100%;"> <a style="margin-top:10px" href="http://wpshopmart.com/plugins/tabs-pro-plugin/" target="_balnk">Unlock 25+ MOre Animation Effect In Premium Version</a> </div>
+				// ************ FI
+				-->
 			
 			</td>
 		</tr>
@@ -566,6 +577,10 @@ if(isset($_POST['action123']) == "default_settins_action")
 		    	</div>
 			</td>
 		</tr>
+
+		<!--
+		// XTEC ************ ELIMINAT - Removed promotional links to all users
+		// 2021.04.28 @aginard
 		<tr>
 			<th scope="row"><label><?php _e('Tabs On Hover',wpshopmart_tabs_r_text_domain); ?></label></th>
 			<td>
@@ -583,6 +598,9 @@ if(isset($_POST['action123']) == "default_settins_action")
 				<a style="margin-top:10px" href="http://wpshopmart.com/plugins/tabs-pro-plugin/" target="_balnk">Available In Premium Version</a>
 			</td>
 		</tr>
+		// ************ FI
+		-->
+
 		<script>
 		
 		jQuery('.ac_tooltip').darkTooltip({
