@@ -84,7 +84,14 @@ function wpsm_tabs_r_editor_popup_content() {
 	</div>
 	<?php
 }
+
+// XTEC ************ ELIMINAT - Hidden box to rate plugin to all users
+// 2021.04.30 @nacho
+/*
 add_action( 'admin_notices', 'wpsm_tabs_r_review' );
+*/
+// ************ FI
+
 function wpsm_tabs_r_review() {
 
 	// Verify that we can do a check for reviews.
