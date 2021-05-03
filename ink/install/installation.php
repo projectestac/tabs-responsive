@@ -12,8 +12,14 @@ function wpsm_tabs_r_front_script() {
 add_action( 'wp_enqueue_scripts', 'wpsm_tabs_r_front_script' );
 add_filter( 'widget_text', 'do_shortcode');
 
+// XTEC ************ MODIFICAT - Added support for button in visual editor (uncommented code)
+// 2021.05.03 @aginard
+add_action('media_buttons_context', 'wpsm_tabs_r_editor_popup_content_button');
+add_action('admin_footer', 'wpsm_tabs_r_editor_popup_content');
+//************ ORIGINAL
 //add_action('media_buttons_context', 'wpsm_tabs_r_editor_popup_content_button');
 //add_action('admin_footer', 'wpsm_tabs_r_editor_popup_content');
+// ************ FI
 
 function wpsm_tabs_r_editor_popup_content_button($context) {
  $img = wpshopmart_tabs_r_directory_url.'assets/images/tabs_48.png';
