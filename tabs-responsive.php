@@ -94,17 +94,14 @@ function wpsm_tabs_r_recom_menu() {
 
 	// XTEC ************ AFEGIT - Hidden options to all users but xtecadmin
 	// 2021.04.26 @nacho
-	if (is_xtec_super_admin() ) {
+	if ( ! is_xtec_super_admin() ) {
+		return ;
+	}
 	// ************FI
 
 	$submenu = add_submenu_page('edit.php?post_type=tabs_responsive', __('More_Free_Plugins', wpshopmart_tabs_r_text_domain), __('More Free Plugins', wpshopmart_tabs_r_text_domain), 'administrator', 'wpsm_tabs_r_recom_page', 'wpsm_tabs_rrecom_page_funct');
 	$submenu2 = add_submenu_page('edit.php?post_type=tabs_responsive', __('Free Vs Pro', wpshopmart_tabs_r_text_domain), __('Free Vs Pro', wpshopmart_tabs_r_text_domain), 'administrator', 'wpsm_tabs_r_fvp_page', 'wpsm_tabs_r_fvp_page_funct');
 
-	// XTEC ************ AFEGIT - Hidden options to all users but xtecadmin
-	// 2021.04.26 @nacho
-	}
-	// ************FI
-	
 	//add hook to add styles and scripts for Tabs Plugin admin page
     add_action( 'admin_print_styles-' . $submenu, 'wpsm_tabs_r_recom_js_css' );
 	add_action( 'admin_print_styles-' . $submenu2, 'wpsm_tabs_r_fvp_js_css' );
