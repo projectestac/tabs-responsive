@@ -14,12 +14,8 @@ add_filter( 'widget_text', 'do_shortcode');
 
 // XTEC ************ MODIFICAT - Added support for button in visual editor (uncommented code)
 // 2021.05.03 @aginard
-// 2021.06.04 @nacho changed deprecated media_buttons_context function by media_buttons
-add_action('media_buttons', 'wpsm_tabs_r_editor_popup_content_button');
+add_action('media_buttons_context', 'wpsm_tabs_r_editor_popup_content_button');
 add_action('admin_footer', 'wpsm_tabs_r_editor_popup_content');
-//************ ORIGINAL
-//add_action('media_buttons_context', 'wpsm_tabs_r_editor_popup_content_button');
-//add_action('admin_footer', 'wpsm_tabs_r_editor_popup_content');
 // ************ FI
 
 function wpsm_tabs_r_editor_popup_content_button($context) {
