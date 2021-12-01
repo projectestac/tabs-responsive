@@ -82,7 +82,14 @@
 							$enable_single_icon = $tabs_single_data['enable_single_icon'];
 						?>	
 							<li role="presentation" <?php if($i==1){ ?> class="active" <?php } ?> onclick="do_resize()">
+
+								<!-- XTEC ************ MODIFICAT - Disable scrolling on tab change. Fixes error in option "Tabs Description Animation" -->
+								<!-- 2021.12.01 @aginard -->
+								<a href="javascript:void(0);" aria-controls="tabs_desc_<?php echo $post_id; ?>_<?php echo $i; ?>" role="tab" data-toggle="tab" data-target="#tabs_desc_<?php echo $post_id; ?>_<?php echo $i; ?>">
+								<!-- ORIGINAL
 								<a href="#tabs_desc_<?php echo esc_attr($post_id); ?>_<?php echo esc_attr($i); ?>" aria-controls="tabs_desc_<?php echo esc_attr($post_id); ?>_<?php echo esc_attr($i); ?>" role="tab" data-toggle="tab">
+								-->
+								<!-- ************ FI -->
 									
 									<?php if($show_tabs_icon_align=="left"){ ?>
 										<?php if($show_tabs_title_icon=="1" || $show_tabs_title_icon=="3") { ?>
