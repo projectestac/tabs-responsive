@@ -7,20 +7,20 @@
 		margin-bottom:20px;
 	}
 	</style>
-	<h1>Tabs Design Templates </h1>
-		<div style="overflow:hidden;display:block;width:100%;padding-top:20px">
-	<div class="col-md-3">
+	<h1> <?php esc_html_e('Tabs Design Templates',wpshopmart_tabs_r_text_domain); ?> </h1>
+	<div class="row" style="overflow:hidden;width:100%;padding-top:20px">
+			<div class="col-md-3">
 				<div class="demoftr">	
 					
 					<div class="">
 						<div class="wpsm_home_portfolio_showcase">
-							<div class="wpsm_ribbon"><a target="_blank" href="https://wpshopmart.com/plugins/tabs-pro-plugin/"><span> Selected </span></a></div>
-							<img class="wpsm_img_responsive ftr_img" src="<?php echo wpshopmart_tabs_r_directory_url.'assets/images/accordion-1.png'?>">
+							<div class="wpsm_ribbon"><a target="_blank" href="https://wpshopmart.com/plugins/tabs-pro-plugin/"><span> <?php esc_html_e('Selected',wpshopmart_tabs_r_text_domain); ?> </span></a></div>
+							<img class="wpsm_img_responsive ftr_img" src="<?php echo esc_url(wpshopmart_tabs_r_directory_url.'assets/images/accordion-1.png'); ?>">
 							</div>
 					</div>
 					<div style="padding:13px;overflow:hidden; background: #EFEFEF; border-top: 1px dashed #ccc;">
 						<h3 class="text-center pull-left" style="margin-top: 10px;margin-bottom: 10px;font-weight:900">Selected Design</h3>
-						<a type="button"  class="pull-right btn btn-danger design_btn" id="templates_btn1" target="_blank" href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" >Check Demo</a>
+						<a type="button"  class="pull-right btn btn-danger design_btn" id="templates_btn1" target="_blank" href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" ><?php esc_html_e('Check Demo',wpshopmart_tabs_r_text_domain); ?></a>
 							</div>		
 				</div>	
 			</div>
@@ -30,13 +30,13 @@
 					
 					<div class="">
 						<div class="wpsm_home_portfolio_showcase">
-							<div class="wpsm_ribbon wpsm_ribbon2"><a target="_blank" href="https://wpshopmart.com/plugins/tabs-pro-plugin/"><span>Buy Now</span></a></div>
-							<img class="wpsm_img_responsive ftr_img" src="<?php echo wpshopmart_tabs_r_directory_url.'assets/images/accordion-2.png'?>">
+							<div class="wpsm_ribbon wpsm_ribbon2"><a target="_blank" href="https://wpshopmart.com/plugins/tabs-pro-plugin/"><span><?php esc_html_e('Buy Now',wpshopmart_tabs_r_text_domain); ?></span></a></div>
+							<img class="wpsm_img_responsive ftr_img" src="<?php echo esc_url(wpshopmart_tabs_r_directory_url.'assets/images/accordion-2.png'); ?>">
 							</div>
 					</div>
 					<div style="padding:13px;overflow:hidden; background: #EFEFEF; border-top: 1px dashed #ccc;">
 						<h3 class="text-center pull-left" style="margin-top: 10px;margin-bottom: 10px;font-weight:900">Pro Templates </h3>
-						<a type="button"  class="pull-right btn btn-danger design_btn" id="templates_btn2" target="_blank" href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" >Check Demo</a>
+						<a type="button"  class="pull-right btn btn-danger design_btn" id="templates_btn2" target="_blank" href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" ><?php esc_html_e('Check Demo',wpshopmart_tabs_r_text_domain); ?></a>
 					</div>		
 				</div>	
 			</div>
@@ -72,11 +72,11 @@
 							<input type="text" id="tabs_title[]" name="tabs_title[]" value="<?php echo esc_attr($tabs_title); ?>" placeholder="Enter Tab Title Here" class="wpsm_ac_label_text">
 							<span class="ac_label"><?php _e('Tab Description',wpshopmart_tabs_r_text_domain); ?></span>
 							<textarea  id="tabs_desc[]" name="tabs_desc[]"  placeholder="Enter Tab Description Here" class="wpsm_ac_label_text"><?php echo esc_html($tabs_desc); ?></textarea>
-							<a type="button" class="btn btn-primary btn-block html_editor_button" data-remodal-target="modal" href="#" id="<?php echo $i; ?>"  onclick="open_editor(<?php echo $i; ?>)">Use WYSIWYG Editor </a>
+							<a type="button" class="btn btn-primary btn-block html_editor_button" data-remodal-target="modal" href="#" id="<?php echo esc_attr($i); ?>"  onclick="open_editor(<?php echo esc_attr($i); ?>)">Use WYSIWYG Editor </a>
 							
 							<span class="ac_label"><?php _e('Tab Icon',wpshopmart_tabs_r_text_domain); ?></span>
 							<div class="form-group input-group">
-								<input data-placement="bottomRight" id="tabs_title_icon[]" name="tabs_title_icon[]" class="form-control icp icp-auto" value="<?php echo  $tabs_title_icon; ?>" type="text" readonly="readonly" />
+								<input data-placement="bottomRight" id="tabs_title_icon[]" name="tabs_title_icon[]" class="form-control icp icp-auto" value="<?php echo esc_attr($tabs_title_icon); ?>" type="text" readonly="readonly" />
 								<span class="input-group-addon "></span>
 							</div>
 							<span class="ac_label"><?php _e('Display Above Icon',wpshopmart_tabs_r_text_domain); ?></span>
@@ -106,7 +106,7 @@
 							<input type="text" id="tabs_title[]" name="tabs_title[]" value="Sample Title" placeholder="Enter Tab Title Here" class="wpsm_ac_label_text">
 							<span class="ac_label"><?php _e('Tab Description',wpshopmart_tabs_r_text_domain); ?></span>
 							<textarea  id="tabs_desc[]" name="tabs_desc[]"  placeholder="Enter Tab Description Here" class="wpsm_ac_label_text">Sample Description</textarea>
-							<a type="button" class="btn btn-primary btn-block html_editor_button" data-remodal-target="modal" href="#" id="<?php echo $i; ?>"  onclick="open_editor(<?php echo $i; ?>)">Use WYSIWYG Editor </a>
+							<a type="button" class="btn btn-primary btn-block html_editor_button" data-remodal-target="modal" href="#" id="<?php echo esc_attr($i); ?>"  onclick="open_editor(<?php echo esc_attr($i); ?>)">Use WYSIWYG Editor </a>
 							
 							<span class="ac_label"><?php _e('Tab Icon',wpshopmart_tabs_r_text_domain); ?></span>
 							<div class="form-group input-group">
@@ -133,7 +133,7 @@
 	<div class="remodal" data-remodal-options=" closeOnOutsideClick: false" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
 	  <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
 	  <div>
-		<h2 id="modal1Title">Accordion Editor</h2>
+		<h2 id="modal1Title"><?php esc_html_e('Accordion Editor',wpshopmart_tabs_r_text_domain); ?></h2>
 		<p id="modal1Desc">
 		  <?php
 			$content = '';

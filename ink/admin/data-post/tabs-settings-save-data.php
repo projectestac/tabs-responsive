@@ -1,5 +1,8 @@
 <?php
 if(isset($PostID) && isset($_POST['tabs_setting_save_action'])) {
+			if (!wp_verify_nonce($_POST['wpsm_tabs_security'], 'wpsm_tabs_nonce_save_settings_values')) {
+				die();
+			}
 			$tabs_sec_title 	          = sanitize_option('tabs_sec_title', $_POST['tabs_sec_title']);
 			$show_tabs_title_icon 		  = sanitize_option('show_tabs_title_icon', $_POST['show_tabs_title_icon']);
 			$show_tabs_icon_align 	      = sanitize_option('show_tabs_icon_align', $_POST['show_tabs_icon_align']);
@@ -19,7 +22,7 @@ if(isset($PostID) && isset($_POST['tabs_setting_save_action'])) {
 			$des_size                     = sanitize_text_field($_POST['des_size']);
 			$font_family                  = sanitize_text_field($_POST['font_family']);
 			$tabs_animation               = sanitize_text_field($_POST['tabs_animation']);
-			$custom_css                   = stripslashes($_POST['custom_css']);
+			$custom_css                   = sanitize_textarea_field($_POST['custom_css']);
 			$tabs_display_on_mob 	          = sanitize_option('tabs_display_on_mob', $_POST['tabs_display_on_mob']);
 			$tabs_display_mode_mob 	          = sanitize_option('tabs_display_mode_mob', $_POST['tabs_display_mode_mob']);
 			

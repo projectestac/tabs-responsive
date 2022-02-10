@@ -13,6 +13,7 @@ function TABS_R_ShortCode( $Id ) {
 	}
 	require("content.php"); 
 	
+	
 	wp_reset_query();
     return ob_get_clean();
 }

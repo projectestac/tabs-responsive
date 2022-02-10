@@ -1,5 +1,5 @@
-<?php 
-	$post_type = "tabs_responsive";
+<?php
+    $post_type = "tabs_responsive";
 	
     $AllTabs = array(  'p' => $WPSM_Tabs_ID, 'post_type' => $post_type, 'orderby' => 'ASC');
     $loop = new WP_Query( $AllTabs );
@@ -58,18 +58,18 @@
 		{
 		?>
 		<?php  if($tabs_sec_title == 'yes' ) { ?>
-					<h3 style="margin-bottom:20px ;display:block;width:100%;margin-top:10px"><?php echo get_the_title( $post_id ); ?> </h3>
+					<h3 style="margin-bottom:20px ;display:block;width:100%;margin-top:10px"><?php echo get_the_title( esc_html($post_id) ); ?> </h3>
 				<?php } ?>
 				<style>
 				
 					<?php 
 					require('style.php');
 					
-					echo $custom_css; ?>
+					echo esc_attr($custom_css); ?>
 				</style>
-				<div id="tab_container_<?php echo $post_id; ?>" >
+				<div id="tab_container_<?php echo esc_attr($post_id); ?>" >
 	 
-					<ul class="wpsm_nav wpsm_nav-tabs" role="tablist" id="myTab_<?php echo $post_id; ?>">
+					<ul class="wpsm_nav wpsm_nav-tabs" role="tablist" id="myTab_<?php echo esc_attr($post_id); ?>">
 						<?php
 						foreach($tabs_data as $tabs_single_data)
 						{
@@ -78,24 +78,24 @@
 							$tabs_title_icon    = $tabs_single_data['tabs_title_icon'];
 							$enable_single_icon = $tabs_single_data['enable_single_icon'];
 						?>	
-							<li role="presentation" <?php if($i==1){ ?> class="active" <?php } ?> >
-								<a href="#tabs_desc_<?php echo $post_id; ?>_<?php echo $i; ?>" aria-controls="tabs_desc_<?php echo $post_id; ?>_<?php echo $i; ?>" role="tab" data-toggle="tab">
+							<li role="presentation" <?php if($i==1){ ?> class="active" <?php } ?> onclick="do_resize()">
+								<a href="#tabs_desc_<?php echo esc_attr($post_id); ?>_<?php echo esc_attr($i); ?>" aria-controls="tabs_desc_<?php echo esc_attr($post_id); ?>_<?php echo esc_attr($i); ?>" role="tab" data-toggle="tab">
 									
 											<?php if($show_tabs_icon_align=="left"){ ?>
 												<?php if($show_tabs_title_icon=="1" || $show_tabs_title_icon=="3") { ?>
-													<?php if($enable_single_icon=="yes") { ?>	<i class="fa <?php echo $tabs_title_icon; ?>"></i> <?php }?>
+													<?php if($enable_single_icon=="yes") { ?>	<i class="fa <?php echo esc_attr($tabs_title_icon); ?>"></i> <?php }?>
 												<?php } 
 											} ?>
 											
 											<?php if($show_tabs_title_icon=="1" || $show_tabs_title_icon=="2") { ?>
 											
-											<span><?php echo $tabs_title; ?></span>
+											<span><?php echo esc_html($tabs_title); ?></span>
 											
 											<?php } ?>
 											
 											<?php if($show_tabs_icon_align=="right"){ ?>
 												<?php if($show_tabs_title_icon=="1" || $show_tabs_title_icon=="3") { ?>
-													<?php if($enable_single_icon=="yes") { ?>	<i class="fa <?php echo $tabs_title_icon; ?>"></i> <?php }?>
+													<?php if($enable_single_icon=="yes") { ?>	<i class="fa <?php echo esc_attr($tabs_title_icon); ?>"></i> <?php }?>
 												<?php } 
 											} ?>
 									
@@ -107,7 +107,7 @@
 					 </ul>
 
 					  <!-- Tab panes -->
-					  <div class="tab-content" id="tab-content_<?php echo $post_id; ?>">
+					  <div class="tab-content" id="tab-content_<?php echo esc_attr($post_id); ?>">
 						<?php  foreach($tabs_data as $tabs_single_data)
 						{
 							$tabs_title         = $tabs_single_data['tabs_title'];
@@ -115,7 +115,7 @@
 							$tabs_title_icon    = $tabs_single_data['tabs_title_icon'];
 							$enable_single_icon = $tabs_single_data['enable_single_icon'];
 						?>
-						 <div role="tabpanel" class="tab-pane <?php if($j==1){ ?> in active <?php } ?>" id="tabs_desc_<?php echo $post_id; ?>_<?php echo $j; ?>">
+						 <div role="tabpanel" class="tab-pane <?php if($j==1){ ?> in active <?php } ?>" id="tabs_desc_<?php echo esc_attr($post_id); ?>_<?php echo esc_attr($j); ?>">
 								<?php  echo do_shortcode($tabs_desc); ?>
 						 </div>
 						<?php $j++; } ?>	
@@ -124,15 +124,15 @@
 				 </div>
  <script>
 		jQuery(function () {
-			jQuery('#myTab_<?php echo $post_id; ?> a:first').tab('show')
+			jQuery('#myTab_<?php echo esc_attr($post_id); ?> a:first').tab('show')
 		});
 		
 		<?php if($tabs_animation!="None") { ?>
 		jQuery(function(){
-			var b="<?php echo $tabs_animation ?>";
+			var b="<?php echo esc_attr($tabs_animation) ?>";
 			var c;
 			var a;
-			d(jQuery("#myTab_<?php echo $post_id; ?> a"),jQuery("#tab-content_<?php echo $post_id; ?>"));function d(e,f,g){
+			d(jQuery("#myTab_<?php echo esc_attr($post_id); ?> a"),jQuery("#tab-content_<?php echo esc_attr($post_id); ?>"));function d(e,f,g){
 				e.click(function(i){
 					i.preventDefault();
 					jQuery(this).tab("show");
@@ -144,6 +144,23 @@
 			}
 		});
 		<?php } ?>
+
+
+		function do_resize(){
+
+			var width=jQuery( '.tab-content .tab-pane iframe' ).width();
+			var height=jQuery( '.tab-content .tab-pane iframe' ).height();
+
+			var toggleSize = true;
+			jQuery('iframe').animate({
+			    width: toggleSize ? width : 640,
+			    height: toggleSize ? height : 360
+			  }, 250);
+
+			  toggleSize = !toggleSize;
+		}
+
+
 	</script>
 				
 			<?php

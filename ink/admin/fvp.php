@@ -1,6 +1,6 @@
   <div class="free-vs-pro-tab info-tab-content">
-	<a href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" target="_blank" class="button button-primary button-hero">Tab Pro Plugin</a>
-	<a href="https://wpshopmart.com/plugins/tabs-pro-plugin/" target="_blank" class="button button-primary button-hero">Upgrade To Pro</a>
+	<a href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" target="_blank" class="button button-primary button-hero"><?php esc_html_e('Tab Pro Plugin',wpshopmart_tabs_r_text_domain); ?></a>
+	<a href="https://wpshopmart.com/plugins/tabs-pro-plugin/" target="_blank" class="button button-primary button-hero"><?php esc_html_e('Upgrade To Pro',wpshopmart_tabs_r_text_domain); ?></a>
   </div>
   
   <div class="free-vs-pro-tab info-tab-content">
@@ -9,15 +9,15 @@
 		                <thead>
 			                <tr>
 			                    <th></th>  
-			                    <th>Tabs  Free</th>
-			                    <th>Tabs Pro</th>
+			                    <th><?php esc_html_e('Tabs Free',wpshopmart_tabs_r_text_domain); ?></th>
+			                    <th><?php esc_html_e('Tabs Pro',wpshopmart_tabs_r_text_domain); ?></th>
 			                </tr>
 		                </thead>
 		                <tbody>
 		                    <tr>
 		                        <td><h3><?php _e('Pricing', wpshopmart_tabs_r_text_domain); ?></h3></td>
-		                        <td class="only-lite">free</td>
-		                        <td class="only-lite">$9</td>
+		                        <td class="only-lite"><?php esc_html_e('free',wpshopmart_tabs_r_text_domain); ?></td>
+		                        <td class="only-lite"><?php esc_html_e('$9',wpshopmart_tabs_r_text_domain); ?></td>
 		                    </tr>
 		                    <tr>
 		                        <td><h3><?php _e('Responsive Layout', wpshopmart_tabs_r_text_domain); ?></h3></td>
@@ -25,12 +25,12 @@
 		                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
 		                    </tr>	     
 							<td><h3><?php _e('No. Of Design Templates', wpshopmart_tabs_r_text_domain); ?></h3></td>
-		                        <td class="only-lite">1</td>
-		                        <td class="only-lite">20+</td>
+		                        <td class="only-lite"><?php esc_html_e('1',wpshopmart_tabs_r_text_domain); ?></td>
+		                        <td class="only-lite"><?php esc_html_e('20+',wpshopmart_tabs_r_text_domain); ?></td>
 		                    </tr>
 								<td><h3><?php _e('Coulmn Layout', wpshopmart_tabs_r_text_domain); ?></h3></td>
-		                        <td class="only-lite">3</td>
-		                        <td class="only-lite">9</td>
+		                        <td class="only-lite"><?php esc_html_e('3',wpshopmart_tabs_r_text_domain); ?></td>
+		                        <td class="only-lite"><?php esc_html_e('9',wpshopmart_tabs_r_text_domain); ?></td>
 		                    </tr>		                    
 		                   
 		                    <tr>
@@ -67,7 +67,7 @@
 							 <tr>
 		                    	 <td><h3><?php _e('Google Fonts', wpshopmart_tabs_r_text_domain); ?></h3></td>
 		                    	 <td class="only-pro"><span class="dashicons-before dashicons-no-alt"></span></td>
-		                    	 <td class="only-lite">500+</td>
+		                    	 <td class="only-lite"><?php esc_html_e('500+',wpshopmart_tabs_r_text_domain); ?></td>
 		                    </tr>	
 		                     <tr>
 		                    	 <td><h3><?php _e('Custom Image Icons', wpshopmart_tabs_r_text_domain);?></h3></td>
@@ -125,8 +125,8 @@
 		                    </tr>
 		                    
 		                    <tr class="ti-about-page-text-center">
-		                        <td><a href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" target="_blank" class="button button-primary button-hero">Tabs Pro Demo</a></td>
-		                    	<td colspan="2"><a href="https://wpshopmart.com/plugins/tabs-pro-plugin/" target="_blank" class="button button-primary button-hero">Upgrade To Pro</a></td>
+		                        <td><a href="http://demo.wpshopmart.com/tabs-pro-plugin-demo-for-wordpress/" target="_blank" class="button button-primary button-hero"><?php esc_html_e('Tabs Pro Demo',wpshopmart_tabs_r_text_domain); ?></a></td>
+		                    	<td colspan="2"><a href="https://wpshopmart.com/plugins/tabs-pro-plugin/" target="_blank" class="button button-primary button-hero"><?php esc_html_e('Upgrade To Pro',wpshopmart_tabs_r_text_domain); ?></a></td>
 		                    </tr>
 		                </tbody>
 	                </table>			    

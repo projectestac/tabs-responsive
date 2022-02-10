@@ -20,19 +20,19 @@ class Wpsm_Tabs_R_Widget extends WP_Widget {
      */
     public function widget( $args, $instance ) {
         $Title    	=   apply_filters( 'wpsm_tabs_r_widget_title', $instance['Title'] );
-		echo $args['before_widget'];
+		echo wp_kses_post($args['before_widget']);
 		
 		 $wpsm_tabs_r_id	=   apply_filters( 'wpsm_tabs_r_widget_shortcode', $instance['Shortcode'] ); 
 
 		if(is_numeric($wpsm_tabs_r_id)) {
 			if ( ! empty( $instance['Title'] ) ) {
-			echo $args['before_title'] . apply_filters( 'widget_title', $instance['Title'] ). $args['after_title'];
+			echo wp_kses_post($args['before_title']) . apply_filters( 'widget_title', esc_html($instance['Title']) ). wp_kses_post($args['after_title']);
 			}
-			echo do_shortcode( '[TABS_R id='.$wpsm_tabs_r_id.']' );
+			echo do_shortcode( '[TABS_R id='.esc_html($wpsm_tabs_r_id).']' );
 		} else {
 			echo "<p>Sorry! No Tabs Shortcode Found.</p>";
 		}
-		echo $args['after_widget'];
+		echo wp_kses_post($args['after_widget']);
     }
 
     /**
@@ -57,12 +57,12 @@ class Wpsm_Tabs_R_Widget extends WP_Widget {
         }
         ?>
         <p>
-            <label for="<?php echo $this->get_field_id( 'Title' ); ?>"><?php _e( 'Widget Title' ); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id( 'Title' ); ?>" name="<?php echo $this->get_field_name( 'Title' ); ?>" type="text" value="<?php echo esc_attr( $Title ); ?>">
+            <label for="<?php echo esc_attr($this->get_field_id( 'Title' )); ?>"><?php _e( 'Widget Title' ); ?></label>
+            <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'Title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'Title' )); ?>" type="text" value="<?php echo esc_attr( $Title ); ?>">
         </p>
 
         <p>
-            <label for="<?php echo $this->get_field_id( 'Shortcode' ); ?>"><?php _e( 'Select Tabs' ); ?> (Required)</label>
+            <label for="<?php echo esc_attr($this->get_field_id( 'Shortcode' )); ?>"><?php _e( 'Select Tabs' ); ?> (Required)</label>
 			<?php
 			/**
 			 * Get All Tabs Shortcode Custom Post Type
@@ -72,15 +72,15 @@ class Wpsm_Tabs_R_Widget extends WP_Widget {
 			$All_Wpsm_Acsh = array('post_type' => $wpsm_ac_cpt, 'orderby' => 'ASC', 'post_status' => 'publish');
 			$All_Wpsm_Acsh = new WP_Query( $All_Wpsm_Acsh );		
 			?>
-			<select id="<?php echo $this->get_field_id( 'Shortcode' ); ?>" name="<?php echo $this->get_field_name( 'Shortcode' ); ?>" style="width: 100%;">
-				<option value="Select Any Tabs" <?php if($Shortcode == "Select Any Tabs") echo 'selected="selected"'; ?>>Select Any Tabs</option>
+			<select id="<?php echo esc_attr($this->get_field_id( 'Shortcode' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'Shortcode' )); ?>" style="width: 100%;">
+				<option value="Select Any Tabs" <?php if($Shortcode == "Select Any Tabs") echo 'selected="selected"'; ?>><?php esc_html_e('Select Any Tabs',wpshopmart_tabs_r_text_domain); ?></option>
 				<?php
 				if( $All_Wpsm_Acsh->have_posts() ) {	 ?>	
 				<?php while ( $All_Wpsm_Acsh->have_posts() ) : $All_Wpsm_Acsh->the_post();	
 					$PostId = get_the_ID(); 
 					$PostTitle = get_the_title($PostId);
 				?>
-				<option value="<?php echo $PostId; ?>" <?php if($Shortcode == $PostId) echo 'selected="selected"'; ?>><?php if($PostTitle) echo $PostTitle; else _e("No Title", wpshopmart_tabs_r_text_domain); ?></option>
+				<option value="<?php echo esc_attr($PostId); ?>" <?php if($Shortcode == $PostId) echo 'selected="selected"'; ?>><?php if($PostTitle) echo esc_html($PostTitle); else _e("No Title", wpshopmart_tabs_r_text_domain); ?></option>
 				<?php endwhile; ?>
 				<?php
 			}  else  { 

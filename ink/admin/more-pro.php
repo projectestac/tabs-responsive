@@ -113,21 +113,21 @@
 		padding-right: 22px;
 	}
 </style>
-<h1>Recommended Premium Plugins From Wpshopmart</h1>
+<h1><?php esc_html_e('Recommended Premium Plugins From Wpshopmart',wpshopmart_tabs_r_text_domain); ?></h1>
 <div style="overflow:hidden;display:block;width:100%;padding-top:20px;padding-bottom:20px;">
-	<div class="col-md-12">
+	<div class="row col-md-12">
 		
 		<div class="col-md-4"> 
 			
 				<div class="wpsm-theme-container" style="">
-					<img width="700" height="394" src="<?php echo wpshopmart_tabs_r_directory_url.'assets/images/tabs-pro-screesnhot.png'; ?>" class="wpsm_site-img-responsive wp-post-image" alt="tabs pro plugin">
+					<img width="700" height="394" src="<?php echo esc_url(wpshopmart_tabs_r_directory_url.'assets/images/tabs-pro-screesnhot.png'); ?>" class="wpsm_site-img-responsive wp-post-image" alt="tabs pro plugin">
 					<div class="wpsm_product_wrapper">
-						<h3 style="width:70%">Team Pro  </h3>
-						<span class="price"><span class="amount">$16</span></span>
+						<h3 style="width:70%"><?php esc_html_e('Team Pro',wpshopmart_tabs_r_text_domain); ?></h3>
+						<span class="price"><span class="amount"><?php esc_html_e('$16',wpshopmart_tabs_r_text_domain); ?></span></span>
 						<div class="wpsm-btn-block" style="">
 															
-							<a title="Check Detail" target="_blank" href="https://wpshopmart.com/plugins/team-pro/" class="portfolio_read_more_btn pull-left">Check Detail</a>
-							<a title="View Demo" target="_blank" href="http://demo.wpshopmart.com/team-pro-demo/" class="portfolio_demo_btn pull-right">View Demo</a>
+							<a title="Check Detail" target="_blank" href="https://wpshopmart.com/plugins/team-pro/" class="portfolio_read_more_btn pull-left"><?php esc_html_e('Check Detail',wpshopmart_tabs_r_text_domain); ?></a>
+							<a title="View Demo" target="_blank" href="http://demo.wpshopmart.com/team-pro-demo/" class="portfolio_demo_btn pull-right"><?php esc_html_e('View Demo',wpshopmart_tabs_r_text_domain); ?></a>
 						</div>
 					</div>
 				</div>
@@ -136,48 +136,14 @@
 		<div class="col-md-4"> 
 			
 				<div class="wpsm-theme-container" style="">
-					<img width="700" height="394" src="<?php echo wpshopmart_tabs_r_directory_url.'assets/images/cb.png'; ?>" class="wpsm_site-img-responsive wp-post-image" alt="Colorbox and panels pro plugin">
+					<img width="700" height="394" src="<?php echo esc_url(wpshopmart_tabs_r_directory_url.'assets/images/cb.png'); ?>" class="wpsm_site-img-responsive wp-post-image" alt="Colorbox and panels pro plugin">
 					<div class="wpsm_product_wrapper">
-						<h3  style="width:70%">Testimonial Pro </h3>
-						<span class="price"><span class="amount">$14</span></span>
+						<h3  style="width:70%"><?php esc_html_e('Testimonial Pro',wpshopmart_tabs_r_text_domain); ?> </h3>
+						<span class="price"><span class="amount"><?php esc_html_e('$14',wpshopmart_tabs_r_text_domain); ?></span></span>
 						<div class="wpsm-btn-block" style="">
 															
-							<a title="Check Detail" target="_blank" href="https://wpshopmart.com/plugins/colorbox-pro/" class="portfolio_read_more_btn pull-left">Check Detail</a>
-							<a title="View Demo" target="_blank" href="http://demo.wpshopmart.com/colorbox-pro/" class="portfolio_demo_btn pull-right">View Demo</a>
-						</div>
-					</div>
-				</div>
-			
-		</div>
-		
-		<div class="col-md-4"> 
-			
-				<div class="wpsm-theme-container" style="">
-					<img width="700" height="394" src="<?php echo wpshopmart_tabs_r_directory_url.'assets/images/csp.png'; ?>" class="wpsm_site-img-responsive wp-post-image" alt="Colorbox and panels pro plugin">
-					<div class="wpsm_product_wrapper">
-						<h3 style="width:70%">Coming Soon Pro  </h3>
-						<span class="price"><span class="amount">$19</span></span>
-						<div class="wpsm-btn-block" style="">
-							<a title="Check Detail" target="_blank" href="https://wpshopmart.com/plugins/testimonial-pro/" class="portfolio_read_more_btn pull-left">Check Detail</a>
-							<a title="View Demo" target="_blank" href="http://demo.wpshopmart.com/testimonial-pro-demo/" class="portfolio_demo_btn pull-right">View Demo</a>
-						</div>
-					</div>
-				</div>
-			
-		</div>
-		
-		
-		<div class="col-md-4"> 
-		
-				<div class="wpsm-theme-container" style="">
-					<img width="700" height="394" src="<?php echo wpshopmart_tabs_r_directory_url.'assets/images/ac.png'; ?>" class="wpsm_site-img-responsive wp-post-image" alt="Colorbox and panels pro plugin">
-					<div class="wpsm_product_wrapper">
-						<h3  style="width:70%">Accordion Pro </h3>
-						<span class="price"><span class="amount">$9</span></span>
-						<div class="wpsm-btn-block" style="">
-															
-							<a title="Check Detail" target="_blank" href="http://wpshopmart.com/plugins/accordion-pro/" class="portfolio_read_more_btn pull-left">Check Detail</a>
-							<a title="View Demo" target="_blank" href="http://demo.wpshopmart.com/accordion-pro/" class="portfolio_demo_btn pull-right">View Demo</a>
+							<a title="Check Detail" target="_blank" href="https://wpshopmart.com/plugins/colorbox-pro/" class="portfolio_read_more_btn pull-left"><?php esc_html_e('Check Detail',wpshopmart_tabs_r_text_domain); ?></a>
+							<a title="View Demo" target="_blank" href="http://demo.wpshopmart.com/colorbox-pro/" class="portfolio_demo_btn pull-right"><?php esc_html_e('View Demo',wpshopmart_tabs_r_text_domain); ?></a>
 						</div>
 					</div>
 				</div>
@@ -187,14 +153,48 @@
 		<div class="col-md-4"> 
 			
 				<div class="wpsm-theme-container" style="">
-					<img width="700" height="394" src="<?php echo wpshopmart_tabs_r_directory_url.'assets/images/counters.jpg'; ?>" class="wpsm_site-img-responsive wp-post-image" alt="Colorbox and panels pro plugin">
+					<img width="700" height="394" src="<?php echo esc_url(wpshopmart_tabs_r_directory_url.'assets/images/csp.png'); ?>" class="wpsm_site-img-responsive wp-post-image" alt="Colorbox and panels pro plugin">
 					<div class="wpsm_product_wrapper">
-						<h3  style="width:70%">Counter Number Pro </h3>
-						<span class="price"><span class="amount">$12</span></span>
+						<h3 style="width:70%"><?php esc_html_e('Coming Soon Pro',wpshopmart_tabs_r_text_domain); ?></h3>
+						<span class="price"><span class="amount"><?php esc_html_e('$19',wpshopmart_tabs_r_text_domain); ?></span></span>
+						<div class="wpsm-btn-block" style="">
+							<a title="Check Detail" target="_blank" href="https://wpshopmart.com/plugins/testimonial-pro/" class="portfolio_read_more_btn pull-left"><?php esc_html_e('Check Detail',wpshopmart_tabs_r_text_domain); ?></a>
+							<a title="View Demo" target="_blank" href="http://demo.wpshopmart.com/testimonial-pro-demo/" class="portfolio_demo_btn pull-right"><?php esc_html_e('View Demo',wpshopmart_tabs_r_text_domain); ?></a>
+						</div>
+					</div>
+				</div>
+			
+		</div>
+		
+		
+		<div class="col-md-4"> 
+		
+				<div class="wpsm-theme-container" style="">
+					<img width="700" height="394" src="<?php echo esc_url(wpshopmart_tabs_r_directory_url.'assets/images/ac.png'); ?>" class="wpsm_site-img-responsive wp-post-image" alt="Colorbox and panels pro plugin">
+					<div class="wpsm_product_wrapper">
+						<h3  style="width:70%"><?php esc_html_e('Accordion Pro',wpshopmart_tabs_r_text_domain); ?></h3>
+						<span class="price"><span class="amount"><?php esc_html_e('$9',wpshopmart_tabs_r_text_domain); ?></span></span>
 						<div class="wpsm-btn-block" style="">
 															
-							<a title="Check Detail" target="_blank" href="https://wpshopmart.com/plugins/counter-numbers-pro/" class="portfolio_read_more_btn pull-left">Check Detail</a>
-							<a title="View Demo" target="_blank" href="http://demo.wpshopmart.com/counter-number-pro/" class="portfolio_demo_btn pull-right">View Demo</a>
+							<a title="Check Detail" target="_blank" href="http://wpshopmart.com/plugins/accordion-pro/" class="portfolio_read_more_btn pull-left"><?php esc_html_e('Check Detail',wpshopmart_tabs_r_text_domain); ?></a>
+							<a title="View Demo" target="_blank" href="http://demo.wpshopmart.com/accordion-pro/" class="portfolio_demo_btn pull-right"><?php esc_html_e('View Demo',wpshopmart_tabs_r_text_domain); ?></a>
+						</div>
+					</div>
+				</div>
+			
+		</div>
+		
+		<div class="col-md-4"> 
+			
+				<div class="wpsm-theme-container" style="">
+					<img width="700" height="394" src="<?php echo esc_url(wpshopmart_tabs_r_directory_url.'assets/images/counters.jpg'); ?>" class="wpsm_site-img-responsive wp-post-image" alt="Colorbox and panels pro plugin">
+					<div class="wpsm_product_wrapper">
+						<h3  style="width:70%"><?php esc_html_e('Counter Number Pro',wpshopmart_tabs_r_text_domain); ?></h3>
+						<span class="price"><span class="amount"><?php esc_html_e('$12',wpshopmart_tabs_r_text_domain); ?></span></span>
+						<div class="wpsm-btn-block" style="">
+															
+							<a title="Check Detail" target="_blank" href="https://wpshopmart.com/plugins/counter-numbers-pro/" class="portfolio_read_more_btn pull-left"><?php esc_html_e('Check Detail',wpshopmart_tabs_r_text_domain); ?></a>
+							<a title="View Demo" target="_blank" href="http://demo.wpshopmart.com/counter-number-pro/" class="portfolio_demo_btn pull-right"><?php esc_html_e('View Demo',wpshopmart_tabs_r_text_domain); ?></a>
 						</div>
 					</div>
 				</div>
@@ -205,14 +205,14 @@
 		<div class="col-md-4"> 
 			
 				<div class="wpsm-theme-container" style="">
-					<img width="700" height="394" src="<?php echo wpshopmart_tabs_r_directory_url.'assets/images/service-showcase-pro-preview.jpg'; ?>" class="wpsm_site-img-responsive wp-post-image" alt="Colorbox and panels pro plugin">
+					<img width="700" height="394" src="<?php echo esc_url(wpshopmart_tabs_r_directory_url.'assets/images/service-showcase-pro-preview.jpg'); ?>" class="wpsm_site-img-responsive wp-post-image" alt="Colorbox and panels pro plugin">
 					<div class="wpsm_product_wrapper">
-						<h3  style="width:70%">Service Showcase </h3>
-						<span class="price"><span class="amount">$9</span></span>
+						<h3  style="width:70%"><?php esc_html_e('Service Showcase',wpshopmart_tabs_r_text_domain); ?></h3>
+						<span class="price"><span class="amount"><?php esc_html_e('$9',wpshopmart_tabs_r_text_domain); ?></span></span>
 						<div class="wpsm-btn-block" style="">
 															
-							<a title="Check Detail" target="_blank" href="https://wpshopmart.com/plugins/service-showcase-pro-plugin-wordpress/" class="portfolio_read_more_btn pull-left">Check Detail</a>
-							<a title="View Demo" target="_blank" href="http://dazzlersoftware.com/wpshopmart-demo/service-showcase-pro-plugin-demo/" class="portfolio_demo_btn pull-right">View Demo</a>
+							<a title="Check Detail" target="_blank" href="https://wpshopmart.com/plugins/service-showcase-pro-plugin-wordpress/" class="portfolio_read_more_btn pull-left"><?php esc_html_e('Check Detail',wpshopmart_tabs_r_text_domain); ?></a>
+							<a title="View Demo" target="_blank" href="http://dazzlersoftware.com/wpshopmart-demo/service-showcase-pro-plugin-demo/" class="portfolio_demo_btn pull-right"><?php esc_html_e('View Demo',wpshopmart_tabs_r_text_domain); ?></a>
 						</div>
 					</div>
 				</div>

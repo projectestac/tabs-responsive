@@ -112,8 +112,30 @@
 		padding-left: 22px;
 		padding-right: 22px;
 	}
+	.plugin-div-settings ul.plugin-action-buttons-custom li{
+	  	    color: #a7aaad!important;
+		    border-color: #dcdcde!important;
+		    background: #f6f7f7!important;
+		    box-shadow: none!important;
+		    cursor: default;
+		    transform: none!important;
+		    display: inline-block;
+		    text-decoration: none;
+		    font-size: 13px;
+		    line-height: 2.15384615;
+		    min-height: 30px;
+		    margin: 0;
+		    padding: 0 10px;
+		    cursor: pointer;
+		    border-width: 1px;
+		    border-style: solid;
+		    -webkit-appearance: none;
+		    border-radius: 3px;
+		    white-space: nowrap;
+		    box-sizing: border-box;
+	  }
 </style>
-<h1>Recommended Free WordPress Plugins From Wpshopmart</h1>
+<h1><?php esc_html_e('Recommended Free WordPress Plugins From Wpshopmart',wpshopmart_tabs_r_text_domain); ?></h1>
 <div style="overflow:hidden;display:block;width:100%;padding-top:20px;padding-bottom:20px;">
 	<div class="col-md-12">
 		
@@ -174,10 +196,10 @@
 							}
 					
 							echo '<div class="star-rating" title="' . esc_attr( $title ) . '">';
-							echo '<span class="screen-reader-text">' . $title . '</span>';
-							echo str_repeat( '<div class="star star-full"></div>', $full_stars );
-							echo str_repeat( '<div class="star star-half"></div>', $half_stars );
-							echo str_repeat( '<div class="star star-empty"></div>', $empty_stars);
+							echo '<span class="screen-reader-text">' . esc_html($title) . '</span>';
+							echo str_repeat( '<div class="star star-full"></div>', esc_html($full_stars) );
+							echo str_repeat( '<div class="star star-half"></div>', esc_html($half_stars) );
+							echo str_repeat( '<div class="star star-empty"></div>', esc_html($empty_stars) );
 							echo '</div>';
 						}
 					}
@@ -269,20 +291,20 @@
 																				<div class="plugin-div-top plugin-div-settings-top">
 																					<div class="plugin-div-inner-content">
 																						<a href="<?php echo esc_url( $details_link ); ?>" class="thickbox plugin-icon plugin-icon-custom">
-																							<img class="custom_icon" src="<?php echo esc_attr( $plugin_icon_url ) ?>" />
+																							<img class="custom_icon" src="<?php echo esc_url( $plugin_icon_url ) ?>" />
 																						</a>
 																						<div class="name column-name">
 																							<h4>
-																								<a href="<?php echo esc_url( $details_link ); ?>" class="thickbox"><?php echo $title; ?></a>
+																								<a href="<?php echo esc_url( $details_link ); ?>" class="thickbox"><?php echo esc_html($title); ?></a>
 																							</h4>
 																						</div>
 																						<div class="desc column-description">
 																							<p>
-																								<?php echo $description; ?>
+																								<?php echo esc_html($description); ?>
 																							</p>
 																							<p class="authors">
 																								<cite>
-																									By <?php echo $author;?>
+																									<?php esc_html_e('By ',wpshopmart_tabs_r_text_domain);?> <?php  echo wp_kses_data($author);?>
 																								</cite>
 																							</p>
 																						</div>
@@ -293,7 +315,7 @@
 																								<?php
 																									if ($action_links)
 																									{
-																										echo implode("</li><li>", $action_links);
+																										echo wp_kses_data(implode("</li><li>", $action_links));
 																									}
 																										
 																									switch($plugin["slug"])

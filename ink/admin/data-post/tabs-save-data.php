@@ -1,5 +1,8 @@
 <?php
 if(isset($PostID) && isset($_POST['tabs_r_save_data_action']) ) {
+			if (!wp_verify_nonce($_POST['wpsm_tabs_security'], 'wpsm_tabs_nonce_save_settings_values')) {
+				die();
+			}
 			$TotalCount = count($_POST['tabs_title']);
 			$All_data = array();
 			if($TotalCount) {

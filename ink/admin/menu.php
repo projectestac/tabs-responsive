@@ -41,6 +41,7 @@ class wpsm_tabs_r {
 			wp_enqueue_style('wpsm_tabs_r_line-edtor', wpshopmart_tabs_r_directory_url.'assets/css/jquery-linedtextarea.css');
 			wp_enqueue_script( 'wpsm_tabs_r-line-edit-js', wpshopmart_tabs_r_directory_url.'assets/js/jquery-linedtextarea.js');
 			
+			wp_enqueue_script( 'wpsm_tabs_custom-js', wpshopmart_tabs_r_directory_url.'assets/js/tabs-custom.js');
 			wp_enqueue_script( 'wpsm_tabs_bootstrap-js', wpshopmart_tabs_r_directory_url.'assets/js/bootstrap.js');
 			
 			//tooltip
@@ -81,7 +82,7 @@ class wpsm_tabs_r {
         global $post;
         switch( $column ) {
           case 'shortcode' :
-            echo '<input style="width:225px" type="text" onclick="this.select()" value="[TABS_R id='.$post_id.']" readonly="readonly" />';
+            echo '<input style="width:225px" type="text" onclick="this.select()" value="[TABS_R id='.esc_html($post_id).']" readonly="readonly" />';
             break;
           default :
             break;
@@ -130,7 +131,7 @@ class wpsm_tabs_r {
 			}
 			
 		</style>
-		<h3>Tabs Shortcode</h3>
+		<h3><?php esc_html_e('Tabs Shortcode',wpshopmart_tabs_r_text_domain); ?></h3>
 		<p><?php _e("Use below shortcode in any Page/Post to publish your Tabs", wpshopmart_tabs_r_text_domain);?></p>
 		<input readonly="readonly" onclick="this.select()" type="text" value="<?php echo "[TABS_R id=".get_the_ID()."]"; ?>">
 		<?php
@@ -146,19 +147,19 @@ class wpsm_tabs_r {
 		
 		<br><br>
 		<div>
-			<h3>To activate widget into any widget area</H3>
-			<p><a href="<?php get_site_url();?>./widgets.php" >Click Here</a>. </p>
-			<p>Find <b>Tabs Widget </b> and place it to your widget area. Select any Tabs from the list and then save changes.</p>
+			<h3><?php esc_html_e('To activate widget into any widget area',wpshopmart_tabs_r_text_domain); ?></H3>
+			<p><a href="<?php get_site_url();?>./widgets.php" ><?php esc_html_e('Click Here',wpshopmart_tabs_r_text_domain); ?></a>. </p>
+			<p><?php esc_html_e('Find ',wpshopmart_tabs_r_text_domain); ?><b><?php esc_html_e('Tabs Widget ',wpshopmart_tabs_r_text_domain); ?></b><?php esc_html_e(' and place it to your widget area. Select any Tabs from the list and then save changes.',wpshopmart_tabs_r_text_domain); ?></p>
 		</div>	
-		<h3>Custom Css</h3>
-		<textarea name="custom_css" id="custom_css" style="width:100% !important ;height:300px;background:#ECECEC;"><?php echo $custom_css ; ?></textarea>
-		<p>Enter Css without <strong>&lt;style&gt; &lt;/style&gt; </strong> tag</p>
+		<h3><?php esc_html_e('Custom Css',wpshopmart_tabs_r_text_domain); ?></h3>
+		<textarea name="custom_css" id="custom_css" style="width:100% !important ;height:300px;background:#ECECEC;"><?php echo esc_html($custom_css) ; ?></textarea>
+		<p><?php esc_html_e('Enter Css without ',wpshopmart_tabs_r_text_domain); ?><strong>&lt;style&gt; &lt;/style&gt; </strong><?php esc_html_e(' tag',wpshopmart_tabs_r_text_domain); ?></p>
 		<br>
 		
 		<?php if(isset($Settings['custom_css'])){ ?> 
-		<h3>Add This Tab settings as default setting for new tabs</h3>
+		<h3><?php esc_html_e('Add This Tab settings as default setting for new tabs',wpshopmart_tabs_r_text_domain); ?></h3>
 		<div class="">
-			<a  class="button button-primary button-hero" name="updte_wpsm_tabs_r_default_settings" id="updte_wpsm_tabs_r_default_settings" onclick="wpsm_update_default()">Update Default Settings</a>
+			<a  class="button button-primary button-hero" name="updte_wpsm_tabs_r_default_settings" id="updte_wpsm_tabs_r_default_settings" onclick="wpsm_update_default()"><?php esc_html_e('Update Default Settings',wpshopmart_tabs_r_text_domain); ?></a>
 		</div>	
 		<?php } ?>
 		<script>
@@ -195,9 +196,9 @@ class wpsm_tabs_r {
 			
 			</style>
 			<a href="http://wpshopmart.com/members/signup/tabs-responsive-donation" target="_blank" >
-			<img src="<?php echo wpshopmart_tabs_r_directory_url.'assets/images/donate-1.jpg'; ?>" style="width:100%;height:auto"/>
+			<img src="<?php echo esc_url(wpshopmart_tabs_r_directory_url.'assets/images/donate-1.jpg'); ?>" style="width:100%;height:auto"/>
 			<h3> We Need Your Support</h3>
-			<img src="<?php echo wpshopmart_tabs_r_directory_url.'assets/images/donate-button.png'; ?>" style="width:100%;height:auto"/>
+			<img src="<?php echo esc_url(wpshopmart_tabs_r_directory_url.'assets/images/donate-button.png'); ?>" style="width:100%;height:auto"/>
 			</a>
 			<?php 
 	}
@@ -238,8 +239,8 @@ class wpsm_tabs_r {
 				font-size: 40px;
 			}
 		</style>
-		   <h1>Rate This plugin</h1>
-			<a href="https://wordpress.org/support/plugin/tabs-responsive/reviews/?filter=5" target="_blank" class="button button-primary button-hero ">RATE HERE</a>
+		   <h1><?php esc_html_e('Rate This plugin',wpshopmart_tabs_r_text_domain); ?></h1>
+			<a href="https://wordpress.org/support/plugin/tabs-responsive/reviews/?filter=5" target="_blank" class="button button-primary button-hero "><?php esc_html_e('RATE HERE',wpshopmart_tabs_r_text_domain); ?></a>
 			<a class="wpsm-rate-us" style=" text-decoration: none; height: 40px; width: 40px;" href="https://wordpress.org/support/plugin/tabs-responsive/reviews/?filter=5" target="_blank">
 				<span class="dashicons dashicons-star-filled"></span>
 				<span class="dashicons dashicons-star-filled"></span>

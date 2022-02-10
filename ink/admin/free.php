@@ -16,6 +16,28 @@
 		  border: 0px solid #e5e5e5 !important;
 			background: #f1f1f1 !important;
 	  }
+	  .plugin-div-settings ul.plugin-action-buttons-custom li{
+	  	    color: #a7aaad!important;
+		    border-color: #dcdcde!important;
+		    background: #f6f7f7!important;
+		    box-shadow: none!important;
+		    cursor: default;
+		    transform: none!important;
+		    display: inline-block;
+		    text-decoration: none;
+		    font-size: 13px;
+		    line-height: 2.15384615;
+		    min-height: 30px;
+		    margin: 0;
+		    padding: 0 10px;
+		    cursor: pointer;
+		    border-width: 1px;
+		    border-style: solid;
+		    -webkit-appearance: none;
+		    border-radius: 3px;
+		    white-space: nowrap;
+		    box-sizing: border-box;
+	  }
 		  
 </style>
 <div class="row">
@@ -77,10 +99,10 @@
 							}
 					
 							echo '<div class="star-rating" title="' . esc_attr( $title ) . '">';
-							echo '<span class="screen-reader-text">' . $title . '</span>';
-							echo str_repeat( '<div class="star star-full"></div>', $full_stars );
-							echo str_repeat( '<div class="star star-half"></div>', $half_stars );
-							echo str_repeat( '<div class="star star-empty"></div>', $empty_stars);
+							echo '<span class="screen-reader-text">' . esc_html($title) . '</span>';
+							echo str_repeat( '<div class="star star-full"></div>', esc_html($full_stars) );
+							echo str_repeat( '<div class="star star-half"></div>', esc_html($half_stars) );
+							echo str_repeat( '<div class="star star-empty"></div>', esc_html($empty_stars) );
 							echo '</div>';
 						}
 					}
@@ -92,7 +114,7 @@
 										<div id="advanced" class="meta-box-sortables">
 											<div id="gallery_bank_get_started" class="postbox" >
 												<div class="handlediv" data-target="ux_recommendation" title="Click to toggle" data-toggle="collapse"><br></div>
-												<h2 class="hndle" style="text-align:center;font-size:30px;"><span>More Free Plugins Recommendation From Wpshopmart</span></h3>
+												<h2 class="hndle" style="text-align:center;font-size:30px;"><span><?php esc_html_e('More Free Plugins Recommendation From Wpshopmart',wpshopmart_tabs_r_text_domain); ?></span></h3>
 												<div class="inside">
 													<div id="ux_recommendation" class="gallery_bank_layout">
 														
@@ -173,20 +195,20 @@
 																				<div class="plugin-div-top plugin-div-settings-top">
 																					<div class="plugin-div-inner-content">
 																						<a href="<?php echo esc_url( $details_link ); ?>" class="thickbox plugin-icon plugin-icon-custom">
-																							<img class="custom_icon" src="<?php echo esc_attr( $plugin_icon_url ) ?>" />
+																							<img class="custom_icon" src="<?php echo esc_url( $plugin_icon_url ) ?>" />
 																						</a>
 																						<div class="name column-name">
 																							<h4>
-																								<a href="<?php echo esc_url( $details_link ); ?>" class="thickbox"><?php echo $title; ?></a>
+																								<a href="<?php echo esc_url( $details_link ); ?>" class="thickbox"><?php echo esc_html($title); ?></a>
 																							</h4>
 																						</div>
 																						<div class="desc column-description">
 																							<p>
-																								<?php echo $description; ?>
+																								<?php echo esc_html($description); ?>
 																							</p>
 																							<p class="authors">
 																								<cite>
-																									By <?php echo $author;?>
+																									<?php esc_html_e('By ',wpshopmart_tabs_r_text_domain);?> <?php  echo wp_kses_data($author);?>
 																								</cite>
 																							</p>
 																						</div>
@@ -197,7 +219,7 @@
 																								<?php
 																									if ($action_links)
 																									{
-																										echo implode("</li><li>", $action_links);
+																										echo wp_kses_data(implode("</li><li>", $action_links));
 																									}
 																										
 																									switch($plugin["slug"])
