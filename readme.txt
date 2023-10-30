@@ -1,10 +1,10 @@
-=== Tabs ===
+=== Tabs Responsive - With WooCommerce Product Tabs Extension ===
 Contributors: wpshopmart
 Donate link: https://wpshopmart.com/plugins/tabs-pro-plugin/
 Tags: tab, tabs, responsive tabs, animation, animated tab, css3 tabs, bootstrap tabs, tabs content, responsive, shortcode, widget, wordpress tabs, wp tabs, accordion, collapse, toggle, bootstrap tab, jquery, tab widget, tab shortcode, jquery tabs, sidebar, plugin, html, html5, html5 tabs
 Requires at least: 5.0
-Tested up to: 5.8.3
-Stable tag: 2.2.5
+Tested up to: 6.3.1
+Stable tag: 2.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -159,6 +159,59 @@ Please use WordPress support forum to ask any query regarding any issue.
 
 
 == Changelog ==
+
+= 2.4.2 = 
+* design issue resolved
+
+= 2.4.1 = 
+* WooCommerce tabs added 
+
+= 2.4.0 = 
+* minor css issue resolved
+
+= 2.3.9 = 
+* Compatible with wordpress version 6.2
+
+
+= 2.3.8 = 
+* Compatible with wordpress version 6.1.1
+* Resolved minor stying issue
+
+= 2.3.7 = 
+* Minor issue resolved
+
+= 2.3.6 = 
+* Theme Default style issue update
+
+= 2.3.5 = 
+* Theme Default style added
+
+= 2.3.4 = 
+* Compatible with wordpress version 6.1
+
+= 2.3.3 = 
+* Minor bug resolved 
+
+= 2.3.2 = 
+* Minor issue resolved 
+
+= 2.3.1 = 
+* Sanitization Issue Resolved.
+
+= 2.3.0 = 
+* Reviewer Issue Resolved.
+
+= 2.2.9 = 
+* Reviewer Issue Resolved.
+
+= 2.2.8 =
+* Description Field Sanitization issue resolved 
+
+= 2.2.7 =
+* Minor issue resolved 
+
+= 2.2.6 =
+* Compatible with wordpress version 5.9.1
 
 = 2.2.5 =
 * Compatible with wordpress version 5.8.3

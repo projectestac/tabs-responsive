@@ -161,6 +161,7 @@ margin-bottom:20px;
     background: transparent;
     box-shadow: 0 0 20px rgba(0,0,0,.2);
     padding: 0px;
+    position: relative;
 }
 
 .wpsm_img_responsive {
@@ -168,12 +169,11 @@ margin-bottom:20px;
     display: block;
 }
 
-		/* ribbon */
-
+/* ribbon */
 
 .wpsm_ribbon {
 	position: absolute;
-    right: 7px;
+    right: -5px;
     top: -5px;
     z-index: 1;
     overflow: hidden;
@@ -233,4 +233,9 @@ background: linear-gradient(#03A9F4 0%, #2196F3 100%);
     color: #fff;
     background-color: #0fa1f4 !important;
     border-color: #189cf3 !important;
+}
+
+.html_editor_button{
+    display: block;
+    width: 100%;
 }

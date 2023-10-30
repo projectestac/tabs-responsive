@@ -1,18 +1,14 @@
 <style>
 #wpcontent{
-		  padding-left:0px !important;
-		  
+		  padding-left:0px !important;		  
 	  }
-	  .panel-primary{
-		  
+	  .panel-primary{		  
 		  border:0px !important;
 	  }
 	  .panel-default{
-		 background:#f1f1f1 !important; 
-		  
+		 background:#f1f1f1 !important; 		  
 	  }
-	  .postbox{
-		  
+	  .postbox{		  
 		  border: 0px solid #e5e5e5 !important;
 			background: #f1f1f1 !important;
 	  }

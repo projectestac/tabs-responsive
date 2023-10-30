@@ -11,6 +11,10 @@ class wpsm_tabs_r {
 	
 	private function __construct() {
 		add_action('admin_enqueue_scripts', array(&$this, 'wpsm_tabs_r_admin_scripts'));
+		include_once ABSPATH . 'wp-admin/includes/plugin.php';
+		if ( !(is_plugin_active( 'tabs-pro/tabs-pro.php' )) ) {
+			$this->Extension();	
+		}
         if (is_admin()) {
 			add_action('init', array(&$this, 'tabs_r_register_cpt'), 1);
 			add_action('add_meta_boxes', array(&$this, 'wpsm_tabs_r_meta_boxes_group'));
@@ -42,7 +46,7 @@ class wpsm_tabs_r {
 			wp_enqueue_script( 'wpsm_tabs_r-line-edit-js', wpshopmart_tabs_r_directory_url.'assets/js/jquery-linedtextarea.js');
 			
 			wp_enqueue_script( 'wpsm_tabs_custom-js', wpshopmart_tabs_r_directory_url.'assets/js/tabs-custom.js');
-			wp_enqueue_script( 'wpsm_tabs_bootstrap-js', wpshopmart_tabs_r_directory_url.'assets/js/bootstrap.js');
+			//wp_enqueue_script( 'wpsm_tabs_bootstrap-js', wpshopmart_tabs_r_directory_url.'assets/js/bootstrap.js');
 			
 			//tooltip
 			wp_enqueue_style('wpsm_tabs_r_tooltip', wpshopmart_tabs_r_directory_url.'assets/tooltip/darktooltip.css');
@@ -88,6 +92,12 @@ class wpsm_tabs_r {
             break;
         }
     }
+
+    public function Extension() {
+	    if (is_plugin_active('woocommerce/woocommerce.php')) :
+	       new \TABS_RES_PLUGINS\Extension\WooCommerce\WooCommerce();
+	    endif;
+	}
 	
 	// metaboxes groups function for call all metabox unit
 	public function wpsm_tabs_r_meta_boxes_group(){
@@ -98,7 +108,7 @@ class wpsm_tabs_r {
 		
 		add_meta_box ('tabs_r_more_pro', __('More Pro Plugin From Wpshopmart', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_pic_more_pro'), 'tabs_responsive', 'normal', 'low');
 		
-		//add_meta_box('tabs_r_donate', __('Donate Us', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_donate_meta_box_function'), 'tabs_responsive', 'side', 'low');
+		add_meta_box('tabs_r_donate', __('Donate Us', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_donate_meta_box_function'), 'tabs_responsive', 'side', 'low');
 		add_meta_box('tabs_r_rateus', __('Rate Us If You Like This Plugin', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_tabs_r_rateus_meta_box_function'), 'tabs_responsive', 'side', 'low');
 		add_meta_box('tabs_r_setting', __('Tabs Settings', wpshopmart_tabs_r_text_domain), array(&$this, 'wpsm_add_tabs_r_setting_meta_box_function'), 'tabs_responsive', 'side', 'low');
 	}
@@ -189,17 +199,21 @@ class wpsm_tabs_r {
 				text-decoration:none;
 			}
 			#tabs_r_donate h3 {
-			margin-bottom:0;
-			margin-top:3px;
-			padding:0px;
+			margin-bottom:10px;
+			margin-top:5px;
+			padding:10px 0;
+			}
+			#tabs_r_donate a{
+				background:#e0bf1b;
+				border-color:#e0bf1b;
 			}
 			
 			</style>
-			<a href="http://wpshopmart.com/members/signup/tabs-responsive-donation" target="_blank" >
-			<img src="<?php echo esc_url(wpshopmart_tabs_r_directory_url.'assets/images/donate-1.jpg'); ?>" style="width:100%;height:auto"/>
-			<h3> We Need Your Support</h3>
-			<img src="<?php echo esc_url(wpshopmart_tabs_r_directory_url.'assets/images/donate-button.png'); ?>" style="width:100%;height:auto"/>
-			</a>
+			
+			
+			<h3> Need Help?</h3>
+			
+			<a href="https://wordpress.org/support/plugin/tabs-responsive" target="_blank" class="button button-primary button-hero "><?php esc_html_e('Create Support Ticket Here',wpshopmart_tabs_r_text_domain); ?></a>
 			<?php 
 	}
 	public function wpsm_tabs_r_rateus_meta_box_function(){

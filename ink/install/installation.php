@@ -6,7 +6,7 @@ function wpsm_tabs_r_front_script() {
 		wp_enqueue_style('wpsm_tabs_r_animate', wpshopmart_tabs_r_directory_url.'assets/css/animate.css');		
 		wp_enqueue_script('jquery');
 		wp_enqueue_script( 'wpsm_tabs_r_custom-js-front', wpshopmart_tabs_r_directory_url.'assets/js/tabs-custom.js', array(), '', true );
-		wp_enqueue_script( 'wpsm_tabs_r_bootstrap-js-front', wpshopmart_tabs_r_directory_url.'assets/js/bootstrap.js', array(), '', true );
+		//wp_enqueue_script( 'wpsm_tabs_r_bootstrap-js-front', wpshopmart_tabs_r_directory_url.'assets/js/bootstrap.js', array(), '', true );
 		
 }
 
@@ -272,7 +272,7 @@ function wpsm_tabs_respnsive_header_info() {
 			color:#000;
 		}
 		.btn-danger {
-			color: #fff;
+			color: #fff !important;
     background-color: #e0bf1b !important;
     border-color: #e0bf1b !important;
 		}

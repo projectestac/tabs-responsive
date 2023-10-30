@@ -118,20 +118,18 @@
 	<div class="row col-md-12">
 		
 		<div class="col-md-4"> 
-			
-				<div class="wpsm-theme-container" style="">
-					<img width="700" height="394" src="<?php echo esc_url(wpshopmart_tabs_r_directory_url.'assets/images/tabs-pro-screesnhot.png'); ?>" class="wpsm_site-img-responsive wp-post-image" alt="tabs pro plugin">
-					<div class="wpsm_product_wrapper">
-						<h3 style="width:70%"><?php esc_html_e('Team Pro',wpshopmart_tabs_r_text_domain); ?></h3>
-						<span class="price"><span class="amount"><?php esc_html_e('$16',wpshopmart_tabs_r_text_domain); ?></span></span>
-						<div class="wpsm-btn-block" style="">
-															
-							<a title="Check Detail" target="_blank" href="https://wpshopmart.com/plugins/team-pro/" class="portfolio_read_more_btn pull-left"><?php esc_html_e('Check Detail',wpshopmart_tabs_r_text_domain); ?></a>
-							<a title="View Demo" target="_blank" href="http://demo.wpshopmart.com/team-pro-demo/" class="portfolio_demo_btn pull-right"><?php esc_html_e('View Demo',wpshopmart_tabs_r_text_domain); ?></a>
-						</div>
+			<div class="wpsm-theme-container" style="">
+				<img width="700" height="394" src="<?php echo esc_url(wpshopmart_tabs_r_directory_url.'assets/images/tabs-pro-screesnhot.png'); ?>" class="wpsm_site-img-responsive wp-post-image" alt="tabs pro plugin">
+				<div class="wpsm_product_wrapper">
+					<h3 style="width:70%"><?php esc_html_e('Team Pro',wpshopmart_tabs_r_text_domain); ?></h3>
+					<span class="price"><span class="amount"><?php esc_html_e('$16',wpshopmart_tabs_r_text_domain); ?></span></span>
+					<div class="wpsm-btn-block" style="">
+														
+						<a title="Check Detail" target="_blank" href="https://wpshopmart.com/plugins/team-pro/" class="portfolio_read_more_btn pull-left"><?php esc_html_e('Check Detail',wpshopmart_tabs_r_text_domain); ?></a>
+						<a title="View Demo" target="_blank" href="http://demo.wpshopmart.com/team-pro-demo/" class="portfolio_demo_btn pull-right"><?php esc_html_e('View Demo',wpshopmart_tabs_r_text_domain); ?></a>
 					</div>
 				</div>
-			
+			</div>			
 		</div>
 		<div class="col-md-4"> 
 			
@@ -217,11 +215,7 @@
 					</div>
 				</div>
 			
-		</div>
-		
-		
-		
-		
+		</div>		
 		
 	</div>
 </div>	

@@ -730,7 +730,6 @@ fieldset[disabled] .wpsm_navbar-inverse .btn-link:focus {
   display: table;
   content: " ";
 }
-
 .wpsm_nav:after,
 .wpsm_navbar:after,
 .wpsm_navbar-header:after,

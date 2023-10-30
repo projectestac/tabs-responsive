@@ -4,13 +4,16 @@
     $AllTabs = array(  'p' => $WPSM_Tabs_ID, 'post_type' => $post_type, 'orderby' => 'ASC');
     $loop = new WP_Query( $AllTabs );
 	
-	
-	
 	while ( $loop->have_posts() ) : $loop->the_post();
 		//get the post id
 		$post_id = get_the_ID();
 		
 		$Tabs_Settings = unserialize(get_post_meta( $post_id, 'Tabs_R_Settings', true));
+
+		/*echo "<pre>";
+		print_r($Tabs_Settings);
+		die;*/
+
 		if(count($Tabs_Settings)) 
 		{
 			$option_names = array(
@@ -38,12 +41,12 @@
 				"tabs_display_mode_mob"      =>"2",
 				);
 				
-				foreach($option_names as $option_name => $default_value) {
-					if(isset($Tabs_Settings[$option_name])) 
-						${"" . $option_name}  = $Tabs_Settings[$option_name];
-					else
-						${"" . $option_name}  = $default_value;
-				}
+			foreach($option_names as $option_name => $default_value) {
+				if(isset($Tabs_Settings[$option_name])) 
+					${"" . $option_name}  = $Tabs_Settings[$option_name];
+				else
+					${"" . $option_name}  = $default_value;
+			}
 		}		
 		
 		 $tab_border_color = ColorDarken($tabs_title_bg_clr,19);
@@ -81,25 +84,23 @@
 							<li role="presentation" <?php if($i==1){ ?> class="active" <?php } ?> onclick="do_resize()">
 								<a href="#tabs_desc_<?php echo esc_attr($post_id); ?>_<?php echo esc_attr($i); ?>" aria-controls="tabs_desc_<?php echo esc_attr($post_id); ?>_<?php echo esc_attr($i); ?>" role="tab" data-toggle="tab">
 									
-											<?php if($show_tabs_icon_align=="left"){ ?>
-												<?php if($show_tabs_title_icon=="1" || $show_tabs_title_icon=="3") { ?>
-													<?php if($enable_single_icon=="yes") { ?>	<i class="fa <?php echo esc_attr($tabs_title_icon); ?>"></i> <?php }?>
-												<?php } 
-											} ?>
-											
-											<?php if($show_tabs_title_icon=="1" || $show_tabs_title_icon=="2") { ?>
-											
-											<span><?php echo esc_html($tabs_title); ?></span>
-											
-											<?php } ?>
-											
-											<?php if($show_tabs_icon_align=="right"){ ?>
-												<?php if($show_tabs_title_icon=="1" || $show_tabs_title_icon=="3") { ?>
-													<?php if($enable_single_icon=="yes") { ?>	<i class="fa <?php echo esc_attr($tabs_title_icon); ?>"></i> <?php }?>
-												<?php } 
-											} ?>
+									<?php if($show_tabs_icon_align=="left"){ ?>
+										<?php if($show_tabs_title_icon=="1" || $show_tabs_title_icon=="3") { ?>
+											<?php if($enable_single_icon=="yes") { ?>	<i class="fa <?php echo esc_attr($tabs_title_icon); ?>"></i> <?php }?>
+										<?php } 
+									} ?>
 									
-										
+									<?php if($show_tabs_title_icon=="1" || $show_tabs_title_icon=="2") { ?>
+									
+									<span><?php echo esc_html($tabs_title); ?></span>
+									
+									<?php } ?>
+									
+									<?php if($show_tabs_icon_align=="right"){ ?>
+										<?php if($show_tabs_title_icon=="1" || $show_tabs_title_icon=="3") { ?>
+											<?php if($enable_single_icon=="yes") { ?>	<i class="fa <?php echo esc_attr($tabs_title_icon); ?>"></i> <?php }?>
+										<?php } 
+									} ?>											
 									
 								</a>
 							</li>
@@ -166,6 +167,6 @@
 			<?php
 		}
 		else{
-			echo "<h3> No tabs Found </h3>";
+			echo "<h3> No Tabs Found </h3>";
 		}
 	endwhile; ?>

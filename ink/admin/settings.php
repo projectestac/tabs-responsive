@@ -358,6 +358,7 @@ if(isset($_POST['action123']) == "default_settins_action")
 			<td>
 				<select name="font_family" id="font_family" class="standard-dropdown" style="width:100%" >
 					<optgroup label="Default Fonts">
+						<option value="0"        <?php if($font_family == '0' ) { echo "selected"; } ?>><?php esc_html_e('Theme Default Style',wpshopmart_tabs_r_text_domain); ?></option>
 						<option value="Arial"           <?php if($font_family == 'Arial' ) { echo "selected"; } ?>><?php esc_html_e('Arial',wpshopmart_tabs_r_text_domain); ?></option>
 						<option value="Arial Black"    <?php if($font_family == 'Arial Black' ) { echo "selected"; } ?>><?php esc_html_e('Arial Black',wpshopmart_tabs_r_text_domain); ?></option>
 						<option value="Courier New"     <?php if($font_family == 'Courier New' ) { echo "selected"; } ?>><?php esc_html_e('Courier New',wpshopmart_tabs_r_text_domain); ?></option>
