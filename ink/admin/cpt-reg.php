@@ -1,4 +1,18 @@
 <?php
+
+// XTEC ************ AFEGIT - Disable the creation of new tabs when using Gutenberg editor.
+// 2024.03.12 @aginard
+$tadv_admin_settings = get_option('tadv_admin_settings');
+
+if (isset($tadv_admin_settings['options']) &&
+    is_string($tadv_admin_settings['options']) &&
+    strpos($tadv_admin_settings['options'], 'replace_block_editor') === false) {
+    $allow_add_new = false;
+} else {
+    $allow_add_new = true;
+}
+// XTEC ************ FI
+
 $labels = array(
 				'name'                => _x( 'Tabs Responsive', 'Tabs Responsive', wpshopmart_tabs_r_text_domain ),
 				'singular_name'       => _x( 'Tabs Responsive', 'Tabs Responsive', wpshopmart_tabs_r_text_domain ),
@@ -33,6 +47,16 @@ $labels = array(
 				'publicly_queryable'  => false,
 				'capability_type'     => 'page',
 			);
+
+            // XTEC ************ AFEGIT - Disable the creation of new tabs when using Gutenberg editor.
+            // 2024.03.12 @aginard
+            if ($allow_add_new === false) {
+                $args['capabilities']['create_posts'] = false;
+                $args['capabilities']['edit_post'] = 'edit_posts';
+                $args['capabilities']['delete_post'] = 'delete_posts';
+            }
+            // XTEC ************ FI
+
 			register_post_type( 'tabs_responsive', $args );
 			
  ?>
