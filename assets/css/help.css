@@ -1227,7 +1227,7 @@ table th.layout-span12 {
 }
 
 .widget-layout-body .dataTables_info, .widget-layout-body .dataTables_paginate {
-    /*margin-top: 5px !important;*/
+  
     padding-bottom: 0px !important;
     margin-bottom: -4px !important;
 }
@@ -1790,21 +1790,7 @@ button.close {
     display: none;
 }
 
-*=
-=
-=
-=
-=
-Popover
 
-=
-=
-=
-=
-=
-*
-
-/
 
 .popover {
     position: absolute;
